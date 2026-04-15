@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Naggar - Portfolio</title>
+    <title>Youssef Naggar - AI Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="MyStyle.css">
 </head>
@@ -17,7 +17,7 @@
               </div>
                 <div class="profile-text">
                     <h1>Youssef Sami Naggar</h1>
-                    <p>Computer Science Student & Software Engineer</p>
+                    <p>AI Engineer & Computer Science Student</p>
                     <a href="Youssef_Naggar_Resume.pdf" download class="resume-button">Download My Resume</a>
                 </div>
             </div>
@@ -29,6 +29,7 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
@@ -40,16 +41,13 @@
         <!-- About Section -->
         <section id="about">
             <h2 class="section-title">About Me</h2>
-            <p>I am a Computer Science student at Cairo University with a strong passion for programming and data science. Currently ranked 10th in my cohort, I'm dedicated to expanding my knowledge and skills in various programming languages and technologies. I enjoy building practical applications and solving complex problems through coding.</p>
+            <p>I'm a 3rd-year Computer Science student at Cairo University's Faculty of Computers and Artificial Intelligence, specializing in the AI department and ranked in the top 10 of my cohort. I'm passionate about machine learning, deep learning, and building end-to-end AI systems — from data pipelines to deployed models. I enjoy tackling complex problems with clean, efficient code and am constantly pushing the boundaries of what I can build and learn.</p>
             <div class="language-list">
                 <div class="language-item">
                     <strong>English:</strong> B2
                 </div>
                 <div class="language-item">
                     <strong>Arabic:</strong> Native
-                </div>
-                <div class="language-item">
-                    <strong>French:</strong> B1 (Delf B1 certified)
                 </div>
             </div>
         </section>
@@ -60,8 +58,23 @@
             <div class="education-card">
                 <h3>Bachelor of Science in Computer Science</h3>
                 <p><strong>Faculty of Computers and Artificial Intelligence, Cairo University</strong></p>
-                <p>Expected Graduation: 2027 (Currently in 2nd year)</p>
-                <p>GPA: 3.73/4.0 (Ranked 10th in cohort)</p>
+                <p>Expected Graduation: 2027 (Currently in 3rd year)</p>
+                <p>GPA: 3.6/4.0 — Excellent | Ranked Top 10 in Cohort | Specialization: AI Department</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="education-card">
+                <h3>AI/ML Trainee — Elevvo Internship Program</h3>
+                <p><strong>Elevvo · 2025</strong></p>
+                <p>Contributed to five end-to-end machine learning projects spanning regression, classification, and time-series forecasting. Implemented and benchmarked diverse ML models using Python, Scikit-learn, and XGBoost, and deployed all work to GitHub to build a strong public portfolio.</p>
+            </div>
+            <div class="education-card">
+                <h3>Summer Intern — CIB Summer Program</h3>
+                <p><strong>Commercial International Bank (CIB) · 2025</strong></p>
+                <p>Participated in "The Green Leap," a structured program focused on ESG strategy and digital transformation in banking. Gained hands-on exposure to corporate governance, cybersecurity frameworks, and financial analysis across sessions led by senior CIB professionals.</p>
             </div>
         </section>
 
@@ -79,13 +92,15 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Technologies</h3>
+                    <h3>Technologies & Libraries</h3>
                     <ul class="skill-list">
-                        <li>NumPy</li>
+                        <li>NumPy / CuPy</li>
                         <li>Pandas</li>
-                        <li>scikit-learn</li>
-                        <li>Beautiful Soup</li>
-                        <li>Django</li>
+                        <li>Scikit-learn</li>
+                        <li>XGBoost / CatBoost</li>
+                        <li>PyTorch</li>
+                        <li>Optuna</li>
+                        <li>LangChain</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -104,9 +119,95 @@
         <section id="projects">
             <h2 class="section-title">Projects</h2>
             
+            <!-- Project: Dog Breed Classifier -->
+            <div class="project-card">
+                <h3><a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank" class="project-title-link">Dog Breed Classifier</a></h3>
+                <div class="project-description">
+                    <p>A high-accuracy image classification system trained on the Stanford Dogs dataset, spanning 120 distinct breeds. The pipeline goes beyond a simple fine-tuning job — it handles bounding-box-based image cropping to eliminate background noise, applies MixUp augmentation to improve generalization, and fine-tunes ConvNeXt-V2 to push accuracy well past baseline CNN approaches.</p>
+                </div>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Fine-tuned ConvNeXt-V2 on 120 dog breeds with 90.5% test accuracy</li>
+                        <li>Automated bounding-box preprocessing to crop subjects and reduce background noise</li>
+                        <li>MixUp augmentation for improved cross-class generalization</li>
+                        <li>Full PyTorch training loop with learning rate scheduling</li>
+                        <li>End-to-end pipeline from raw dataset to inference-ready model</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">ConvNeXt-V2</span>
+                    <span class="tech-tag">MixUp Augmentation</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <!-- Project: Email Fraud Detector -->
+            <div class="project-card">
+                <h3><a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank" class="project-title-link">Email Fraud Detector</a></h3>
+                <div class="project-description">
+                    <p>A production-grade fraud detection pipeline built on the Enron email dataset — 447K emails with a brutal 192:1 class imbalance. The system combines rich email metadata with NLP-derived features (VADER sentiment scores and MiniLM sentence embeddings) to give CatBoost the signal it needs to surface fraudulent emails with high recall, evaluated using F2-score to prioritize catching fraud over precision.</p>
+                </div>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Achieved 0.847 F2-score on a heavily imbalanced 447K-email dataset</li>
+                        <li>Combined email metadata with VADER sentiment and MiniLM semantic embeddings</li>
+                        <li>CatBoost model with hyperparameter tuning via Optuna</li>
+                        <li>Handled extreme class imbalance (192:1) through strategic sampling and class weighting</li>
+                        <li>Full feature engineering pipeline across text content and structural email fields</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CatBoost</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">MiniLM Embeddings</span>
+                    <span class="tech-tag">VADER</span>
+                    <span class="tech-tag">Optuna</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <!-- Project: Neural Network from Scratch -->
+            <div class="project-card">
+                <h3><a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank" class="project-title-link">Neural Network from Scratch</a></h3>
+                <div class="project-description">
+                    <p>A fully custom neural network engine built in pure NumPy/CuPy — no frameworks, no autograd. This project is a ground-up implementation of everything that makes deep learning tick: vectorized forward and backward passes, multiple activation functions with correct derivatives, momentum SGD, He/Xavier weight initialization, and GPU acceleration via CuPy. The result matches PyTorch's accuracy on the same benchmark.</p>
+                </div>
+                <div class="project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Matched PyTorch's 84% benchmark accuracy via hand-coded vectorized backpropagation</li>
+                        <li>Supports ReLU, Sigmoid, Tanh activations with analytically correct derivatives</li>
+                        <li>Momentum SGD optimizer with configurable hyperparameters</li>
+                        <li>He and Xavier weight initialization based on activation type</li>
+                        <li>GPU acceleration through CuPy with automatic CPU fallback</li>
+                        <li>Mini-batch training with per-epoch loss and accuracy tracking</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">CuPy</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">GPU Acceleration</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
             <!-- Project 1: Weather Wizard 3000 -->
             <div class="project-card">
-                <h3><a href="https://github.com/YoussefSamiGeorges/Weather-Wizard-3000" target="_blank" class="project-title-link">Weather Wizard 3000</a></h3>
+                <h3><a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank" class="project-title-link">Weather Wizard 3000</a></h3>
                 <img src="weather wizard 3000.png" alt="Weather Wizard 3000" class="project-vertical-image">
                 <div class="project-description">
                     <p>A personal weather forecasting assistant that provides 5-day forecasts and AI-powered outfit recommendations. Built in Python, this application leverages the OpenWeatherMap API for accurate weather data and Google's Gemini API for intelligent clothing suggestions based on current weather conditions.</p>
@@ -129,13 +230,13 @@
                     <span class="tech-tag">Data Processing</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/YoussefSamiGeorges/Weather-Wizard-3000" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
 
             <!-- Project 2: Wordle Combination Finder -->
             <div class="project-card">
-                <h3><a href="https://github.com/YoussefSamiGeorges/Wordle-Combination-Finder" target="_blank" class="project-title-link">Wordle Combination Finder</a></h3>
+                <h3><a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank" class="project-title-link">Wordle Combination Finder</a></h3>
                 <div class="project-description">
                     <p>An algorithmic solution to find the optimal word combinations for the popular Wordle game. This project analyzes letter frequencies and their positions to identify sets of words that maximize information gain and efficiently narrow down possible solutions in Wordle.</p>
                 </div>
@@ -162,13 +263,13 @@
                     <p>Optimal 4-word combination: ['HOWFS', 'IXTLE', 'JUMBY', 'KRANG'] with a score of 2659, outperforming commonly cited combinations by 8%.</p>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/YoussefSamiGeorges/Wordle-Combination-Finder" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
 
             <!-- Project 3: UltraTube -->
             <div class="project-card">
-                <h3><a href="https://github.com/YoussefSamiGeorges/UltraTube" target="_blank" class="project-title-link">UltraTube - YouTube Media Downloader</a></h3>
+                <h3><a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank" class="project-title-link">UltraTube - YouTube Media Downloader</a></h3>
                 <div class="project-description">
                     <p>A powerful command-line application for downloading YouTube content with advanced features. UltraTube goes beyond basic downloaders by supporting multiple audio tracks, subtitle options, and various quality settings while preserving metadata and providing a user-friendly interface.</p>
                 </div>
@@ -191,13 +292,13 @@
                     <span class="tech-tag">Command Line Interface</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/YoussefSamiGeorges/UltraTube" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
 
             <!-- Project 4: Monster Wrangler -->
             <div class="project-card">
-                <h3><a href="https://github.com/YoussefSamiGeorges/Monster-Wrangler-Game" target="_blank" class="project-title-link">Monster Wrangler Game</a></h3>
+                <h3><a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank" class="project-title-link">Monster Wrangler Game</a></h3>
                 <div class="project-images">
                     <img src="Monster Wrangler image 1.png" alt="Monster Wrangler image 1" class="project-horizontal-image">
                     <img src="Monster Wrangler image 2.png" alt="Monster Wrangler image 2" class="project-horizontal-image">
@@ -228,7 +329,7 @@
                     <p>Arrow keys to move the knight, Space to use warp ability or start a new game.</p>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/YoussefSamiGeorges/Monster-Wrangler-Game" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/Youssef-Naggar/monster-wrangler" target="_blank"><i class="fab fa-github"></i> View Code</a>
                 </div>
             </div>
         </section>
@@ -237,16 +338,24 @@
         <section id="certifications">
             <h2 class="section-title">Certifications & Courses</h2>
             <div class="certification-card">
-                <h3>Python for Data Science, AI & Development</h3>
+                <h3>IBM Data Science Specialization</h3>
                 <p>IBM</p>
             </div>
             <div class="certification-card">
-                <h3>Databases and SQL for Data Science with Python</h3>
-                <p>IBM</p>
+                <h3>CS50's Introduction to Databases with SQL</h3>
+                <p>Harvard University</p>
             </div>
             <div class="certification-card">
-                <h3>Statistics with Python Specialization</h3>
-                <p>University of Michigan</p>
+                <h3>Mathematics for Machine Learning Specialization</h3>
+                <p>Imperial College London</p>
+            </div>
+            <div class="certification-card">
+                <h3>Building RAG Agents with LLMs</h3>
+                <p>NVIDIA Deep Learning Institute</p>
+            </div>
+            <div class="certification-card">
+                <h3>Introduction to MCP (Model Context Protocol)</h3>
+                <p>Anthropic Academy</p>
             </div>
         </section>
 
@@ -256,7 +365,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <p>youssef.naggar.pro@gmail.com</p>
+                    <p><a href="mailto:youssef.naggar.pro@gmail.com">youssef.naggar.pro@gmail.com</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -264,15 +373,19 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Cairo, Zahraa El Maadi</p>
+                    <p>Cairo, Egypt</p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <p><a href="https://www.linkedin.com/in/youssef-naggar/" target="_blank">linkedin.com/in/youssef-naggar/</a></p>
+                    <p><a href="https://www.linkedin.com/in/youssef-naggar/" target="_blank">linkedin.com/in/youssef-naggar</a></p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <p><a href="https://github.com/youssef-naggar" target="_blank">github.com/YoussefSamiGeorges</a></p>
+                    <p><a href="https://github.com/Youssef-Naggar" target="_blank">github.com/Youssef-Naggar</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <p><a href="#" target="_blank">Portfolio</a></p>
                 </div>
             </div>
         </section>
