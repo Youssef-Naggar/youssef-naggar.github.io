@@ -254,3 +254,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }, 500);
 });
+
+// ===== Read More / Show More Toggle =====
+function toggleSection(hiddenId, btnId) {
+    var hidden = document.getElementById(hiddenId);
+    var btn = document.getElementById(btnId);
+    var isHidden = hidden.style.display === 'none' || hidden.style.display === '';
+
+    if (isHidden) {
+        hidden.style.display = hiddenId === 'certs-hidden' ? 'grid' : 'block';
+        btn.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
+    } else {
+        hidden.style.display = 'none';
+        if (hiddenId === 'projects-hidden') {
+            btn.innerHTML = '<i class="fas fa-chevron-down"></i> Show More Projects';
+        } else {
+            btn.innerHTML = '<i class="fas fa-chevron-down"></i> Show More Certifications';
+        }
+    }
+}

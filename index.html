@@ -118,220 +118,238 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2 class="section-title">Projects</h2>
-            
-            <!-- Project: Dog Breed Classifier -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank" class="project-title-link">Dog Breed Classifier</a></h3>
-                <div class="project-description">
-                    <p>A high-accuracy image classification system trained on the Stanford Dogs dataset, spanning 120 distinct breeds. The pipeline goes beyond a simple fine-tuning job — it handles bounding-box-based image cropping to eliminate background noise, applies MixUp augmentation to improve generalization, and fine-tunes ConvNeXt-V2 to push accuracy well past baseline CNN approaches.</p>
+
+            <!-- Visible Projects (first 3) -->
+            <div id="projects-visible">
+
+                <!-- Project 1: Weather Wizard 3000 -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank" class="project-title-link">Weather Wizard 3000</a></h3>
+                    <img src="weather wizard 3000.png" alt="Weather Wizard 3000" class="project-vertical-image">
+                    <div class="project-description">
+                        <p>A personal weather forecasting assistant that provides 5-day forecasts and AI-powered outfit recommendations. Built in Python, this application leverages the OpenWeatherMap API for accurate weather data and Google's Gemini API for intelligent clothing suggestions based on current weather conditions.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>5-day weather forecast with detailed information</li>
+                            <li>Multiple location options (city search, IP-based auto-detection, manual coordinates)</li>
+                            <li>Comprehensive weather data including temperature, humidity, and rain predictions</li>
+                            <li>AI-powered outfit suggestions tailored to weather conditions</li>
+                            <li>User-friendly command-line interface with emoji-enhanced output</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">OpenWeatherMap</span>
+                        <span class="tech-tag">Google Gemini</span>
+                        <span class="tech-tag">Data Processing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
                 </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Fine-tuned ConvNeXt-V2 on 120 dog breeds with 90.5% test accuracy</li>
-                        <li>Automated bounding-box preprocessing to crop subjects and reduce background noise</li>
-                        <li>MixUp augmentation for improved cross-class generalization</li>
-                        <li>Full PyTorch training loop with learning rate scheduling</li>
-                        <li>End-to-end pipeline from raw dataset to inference-ready model</li>
-                    </ul>
+
+                <!-- Project 2: Dog Breed Classifier -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank" class="project-title-link">Dog Breed Classifier</a></h3>
+                    <div class="project-description">
+                        <p>A high-accuracy image classification system trained on the Stanford Dogs dataset, spanning 120 distinct breeds. The pipeline goes beyond a simple fine-tuning job — it handles bounding-box-based image cropping to eliminate background noise, applies MixUp augmentation to improve generalization, and fine-tunes ConvNeXt-V2 to push accuracy well past baseline CNN approaches.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Fine-tuned ConvNeXt-V2 on 120 dog breeds with 90.5% test accuracy</li>
+                            <li>Automated bounding-box preprocessing to crop subjects and reduce background noise</li>
+                            <li>MixUp augmentation for improved cross-class generalization</li>
+                            <li>Full PyTorch training loop with learning rate scheduling</li>
+                            <li>End-to-end pipeline from raw dataset to inference-ready model</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">ConvNeXt-V2</span>
+                        <span class="tech-tag">MixUp Augmentation</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
                 </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">ConvNeXt-V2</span>
-                    <span class="tech-tag">MixUp Augmentation</span>
-                    <span class="tech-tag">Computer Vision</span>
+
+                <!-- Project 3: Email Fraud Detector -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank" class="project-title-link">Email Fraud Detector</a></h3>
+                    <div class="project-description">
+                        <p>A production-grade fraud detection pipeline built on the Enron email dataset — 447K emails with a brutal 192:1 class imbalance. The system combines rich email metadata with NLP-derived features (VADER sentiment scores and MiniLM sentence embeddings) to give CatBoost the signal it needs to surface fraudulent emails with high recall, evaluated using F2-score to prioritize catching fraud over precision.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Achieved 0.847 F2-score on a heavily imbalanced 447K-email dataset</li>
+                            <li>Combined email metadata with VADER sentiment and MiniLM semantic embeddings</li>
+                            <li>CatBoost model with hyperparameter tuning via Optuna</li>
+                            <li>Handled extreme class imbalance (192:1) through strategic sampling and class weighting</li>
+                            <li>Full feature engineering pipeline across text content and structural email fields</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CatBoost</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">MiniLM Embeddings</span>
+                        <span class="tech-tag">VADER</span>
+                        <span class="tech-tag">Optuna</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank"><i class="fab fa-github"></i> View Code</a>
+
+            </div><!-- end #projects-visible -->
+
+            <!-- Hidden Projects (rest) -->
+            <div id="projects-hidden" style="display:none;">
+
+                <!-- Project 4: Neural Network from Scratch -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank" class="project-title-link">Neural Network from Scratch</a></h3>
+                    <div class="project-description">
+                        <p>A fully custom neural network engine built in pure NumPy/CuPy — no frameworks, no autograd. This project is a ground-up implementation of everything that makes deep learning tick: vectorized forward and backward passes, multiple activation functions with correct derivatives, momentum SGD, He/Xavier weight initialization, and GPU acceleration via CuPy. The result matches PyTorch's accuracy on the same benchmark, tested on the EMNIST dataset.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Matched PyTorch's 84% benchmark accuracy on the EMNIST dataset via hand-coded vectorized backpropagation</li>
+                            <li>Supports ReLU, Sigmoid, Tanh activations with analytically correct derivatives</li>
+                            <li>Momentum SGD optimizer with configurable hyperparameters</li>
+                            <li>He and Xavier weight initialization based on activation type</li>
+                            <li>GPU acceleration through CuPy with automatic CPU fallback</li>
+                            <li>Mini-batch training with per-epoch loss and accuracy tracking</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">CuPy</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">EMNIST</span>
+                        <span class="tech-tag">GPU Acceleration</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
                 </div>
+
+                <!-- Project 5: Wordle Combination Finder -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank" class="project-title-link">Wordle Combination Finder</a></h3>
+                    <div class="project-description">
+                        <p>An algorithmic solution to find the optimal word combinations for the popular Wordle game. This project analyzes letter frequencies and their positions to identify sets of words that maximize information gain and efficiently narrow down possible solutions in Wordle.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Data collection and filtering of Wordle-compatible words</li>
+                            <li>Letter position frequency analysis</li>
+                            <li>Advanced scoring system based on letter frequencies in specific positions</li>
+                            <li>Trie data structure implementation for efficient word storage and retrieval</li>
+                            <li>Backtracking algorithm with multiprocessing for optimal combination finding</li>
+                            <li>Discovered superior four-word combination outperforming popular strategies by 8%</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Algorithms</span>
+                        <span class="tech-tag">Multiprocessing</span>
+                        <span class="tech-tag">Web Scraping</span>
+                    </div>
+                    <div class="project-results">
+                        <h4>Key Finding:</h4>
+                        <p>Optimal 4-word combination: ['HOWFS', 'IXTLE', 'JUMBY', 'KRANG'] with a score of 2659, outperforming commonly cited combinations by 8%.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 6: UltraTube -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank" class="project-title-link">UltraTube - YouTube Media Downloader</a></h3>
+                    <div class="project-description">
+                        <p>A powerful command-line application for downloading YouTube content with advanced features. UltraTube goes beyond basic downloaders by supporting multiple audio tracks, subtitle options, and various quality settings while preserving metadata and providing a user-friendly interface.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Flexible media options (video or audio-only downloads)</li>
+                            <li>Multiple audio track selection (including dubbed versions)</li>
+                            <li>Comprehensive subtitle support in multiple languages</li>
+                            <li>Enhanced metadata handling (thumbnails, chapters, tags)</li>
+                            <li>User-friendly interface with clear prompts and error handling</li>
+                            <li>Built with yt-dlp and FFmpeg for powerful media processing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">yt-dlp</span>
+                        <span class="tech-tag">FFmpeg</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Command Line Interface</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Monster Wrangler -->
+                <div class="project-card">
+                    <h3><a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank" class="project-title-link">Monster Wrangler Game</a></h3>
+                    <div class="project-images">
+                        <img src="Monster Wrangler image 1.png" alt="Monster Wrangler image 1" class="project-horizontal-image">
+                        <img src="Monster Wrangler image 2.png" alt="Monster Wrangler image 2" class="project-horizontal-image">
+                    </div>
+                    <div class="project-description">
+                        <p>A fast-paced 2D arcade-style game built with Pygame where players control a knight who must catch specific colored monsters while avoiding others. The game features progressive difficulty, lives system, and special abilities, all implemented with object-oriented design principles.</p>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Arcade-style gameplay with progressive difficulty</li>
+                            <li>Object-oriented design with custom classes for game entities</li>
+                            <li>Collision detection and state management systems</li>
+                            <li>Lives and special abilities (warps) systems</li>
+                            <li>Custom sprites and game assets</li>
+                            <li>Scoring system based on round progression</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pygame</span>
+                        <span class="tech-tag">OOP</span>
+                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag">Sprite Animation</span>
+                    </div>
+                    <div class="project-controls">
+                        <h4>Controls:</h4>
+                        <p>Arrow keys to move the knight, Space to use warp ability or start a new game.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+            </div><!-- end #projects-hidden -->
+
+            <div class="read-more-container">
+                <button class="read-more-btn" id="projects-toggle-btn" onclick="toggleSection('projects-hidden', 'projects-toggle-btn')">
+                    <i class="fas fa-chevron-down"></i> Show More Projects
+                </button>
             </div>
 
-            <!-- Project: Email Fraud Detector -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank" class="project-title-link">Email Fraud Detector</a></h3>
-                <div class="project-description">
-                    <p>A production-grade fraud detection pipeline built on the Enron email dataset — 447K emails with a brutal 192:1 class imbalance. The system combines rich email metadata with NLP-derived features (VADER sentiment scores and MiniLM sentence embeddings) to give CatBoost the signal it needs to surface fraudulent emails with high recall, evaluated using F2-score to prioritize catching fraud over precision.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Achieved 0.847 F2-score on a heavily imbalanced 447K-email dataset</li>
-                        <li>Combined email metadata with VADER sentiment and MiniLM semantic embeddings</li>
-                        <li>CatBoost model with hyperparameter tuning via Optuna</li>
-                        <li>Handled extreme class imbalance (192:1) through strategic sampling and class weighting</li>
-                        <li>Full feature engineering pipeline across text content and structural email fields</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">CatBoost</span>
-                    <span class="tech-tag">NLP</span>
-                    <span class="tech-tag">MiniLM Embeddings</span>
-                    <span class="tech-tag">VADER</span>
-                    <span class="tech-tag">Optuna</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <!-- Project: Neural Network from Scratch -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank" class="project-title-link">Neural Network from Scratch</a></h3>
-                <div class="project-description">
-                    <p>A fully custom neural network engine built in pure NumPy/CuPy — no frameworks, no autograd. This project is a ground-up implementation of everything that makes deep learning tick: vectorized forward and backward passes, multiple activation functions with correct derivatives, momentum SGD, He/Xavier weight initialization, and GPU acceleration via CuPy. The result matches PyTorch's accuracy on the same benchmark.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Matched PyTorch's 84% benchmark accuracy via hand-coded vectorized backpropagation</li>
-                        <li>Supports ReLU, Sigmoid, Tanh activations with analytically correct derivatives</li>
-                        <li>Momentum SGD optimizer with configurable hyperparameters</li>
-                        <li>He and Xavier weight initialization based on activation type</li>
-                        <li>GPU acceleration through CuPy with automatic CPU fallback</li>
-                        <li>Mini-batch training with per-epoch loss and accuracy tracking</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">NumPy</span>
-                    <span class="tech-tag">CuPy</span>
-                    <span class="tech-tag">Deep Learning</span>
-                    <span class="tech-tag">GPU Acceleration</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <!-- Project 1: Weather Wizard 3000 -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank" class="project-title-link">Weather Wizard 3000</a></h3>
-                <img src="weather wizard 3000.png" alt="Weather Wizard 3000" class="project-vertical-image">
-                <div class="project-description">
-                    <p>A personal weather forecasting assistant that provides 5-day forecasts and AI-powered outfit recommendations. Built in Python, this application leverages the OpenWeatherMap API for accurate weather data and Google's Gemini API for intelligent clothing suggestions based on current weather conditions.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>5-day weather forecast with detailed information</li>
-                        <li>Multiple location options (city search, IP-based auto-detection, manual coordinates)</li>
-                        <li>Comprehensive weather data including temperature, humidity, and rain predictions</li>
-                        <li>AI-powered outfit suggestions tailored to weather conditions</li>
-                        <li>User-friendly command-line interface with emoji-enhanced output</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">API Integration</span>
-                    <span class="tech-tag">OpenWeatherMap</span>
-                    <span class="tech-tag">Google Gemini</span>
-                    <span class="tech-tag">Data Processing</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <!-- Project 2: Wordle Combination Finder -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank" class="project-title-link">Wordle Combination Finder</a></h3>
-                <div class="project-description">
-                    <p>An algorithmic solution to find the optimal word combinations for the popular Wordle game. This project analyzes letter frequencies and their positions to identify sets of words that maximize information gain and efficiently narrow down possible solutions in Wordle.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Data collection and filtering of Wordle-compatible words</li>
-                        <li>Letter position frequency analysis</li>
-                        <li>Advanced scoring system based on letter frequencies in specific positions</li>
-                        <li>Trie data structure implementation for efficient word storage and retrieval</li>
-                        <li>Backtracking algorithm with multiprocessing for optimal combination finding</li>
-                        <li>Discovered superior four-word combination outperforming popular strategies by 8%</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Data Analysis</span>
-                    <span class="tech-tag">Algorithms</span>
-                    <span class="tech-tag">Multiprocessing</span>
-                    <span class="tech-tag">Web Scraping</span>
-                </div>
-                <div class="project-results">
-                    <h4>Key Finding:</h4>
-                    <p>Optimal 4-word combination: ['HOWFS', 'IXTLE', 'JUMBY', 'KRANG'] with a score of 2659, outperforming commonly cited combinations by 8%.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <!-- Project 3: UltraTube -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank" class="project-title-link">UltraTube - YouTube Media Downloader</a></h3>
-                <div class="project-description">
-                    <p>A powerful command-line application for downloading YouTube content with advanced features. UltraTube goes beyond basic downloaders by supporting multiple audio tracks, subtitle options, and various quality settings while preserving metadata and providing a user-friendly interface.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Flexible media options (video or audio-only downloads)</li>
-                        <li>Multiple audio track selection (including dubbed versions)</li>
-                        <li>Comprehensive subtitle support in multiple languages</li>
-                        <li>Enhanced metadata handling (thumbnails, chapters, tags)</li>
-                        <li>User-friendly interface with clear prompts and error handling</li>
-                        <li>Built with yt-dlp and FFmpeg for powerful media processing</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">yt-dlp</span>
-                    <span class="tech-tag">FFmpeg</span>
-                    <span class="tech-tag">API Integration</span>
-                    <span class="tech-tag">Command Line Interface</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <!-- Project 4: Monster Wrangler -->
-            <div class="project-card">
-                <h3><a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank" class="project-title-link">Monster Wrangler Game</a></h3>
-                <div class="project-images">
-                    <img src="Monster Wrangler image 1.png" alt="Monster Wrangler image 1" class="project-horizontal-image">
-                    <img src="Monster Wrangler image 2.png" alt="Monster Wrangler image 2" class="project-horizontal-image">
-                </div>
-                <div class="project-description">
-                    <p>A fast-paced 2D arcade-style game built with Pygame where players control a knight who must catch specific colored monsters while avoiding others. The game features progressive difficulty, lives system, and special abilities, all implemented with object-oriented design principles.</p>
-                </div>
-                <div class="project-features">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <li>Arcade-style gameplay with progressive difficulty</li>
-                        <li>Object-oriented design with custom classes for game entities</li>
-                        <li>Collision detection and state management systems</li>
-                        <li>Lives and special abilities (warps) systems</li>
-                        <li>Custom sprites and game assets</li>
-                        <li>Scoring system based on round progression</li>
-                    </ul>
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Pygame</span>
-                    <span class="tech-tag">OOP</span>
-                    <span class="tech-tag">Game Development</span>
-                    <span class="tech-tag">Sprite Animation</span>
-                </div>
-                <div class="project-controls">
-                    <h4>Controls:</h4>
-                    <p>Arrow keys to move the knight, Space to use warp ability or start a new game.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
         </section>
 
         <!-- Certifications Section -->
@@ -339,64 +357,24 @@
             <h2 class="section-title">Certifications & Courses</h2>
             <p class="section-subtitle">Professional certifications and courses I've completed to enhance my skills</p>
 
-            <div class="certificates-container">
+            <div class="certificates-container" id="certs-visible">
 
+                <!-- Gen-AI: Advance MCP -->
                 <article class="certificate-card">
                     <div class="certificate-image">
-                        <img src="IBM Data Science.png" alt="IBM Data Science Certificate">
+                        <img src="Advanced MCP.png" alt="Advance MCP Certificate">
                     </div>
                     <div class="certificate-content">
-                        <h3>IBM Data Science Specialization</h3>
-                        <p>End-to-end data science workflows covering Python, ML modeling, data visualization, and SQL for real-world datasets.</p>
+                        <h3>MCP Advanced Topics</h3>
+                        <p>Advanced techniques for building and deploying MCP servers, enabling LLMs to interact with complex external systems and agentic workflows at scale.</p>
                         <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> IBM via Coursera</span>
-                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-view-btn" target="_blank">View Certificate</a>
+                            <span class="certificate-issuer"><i class="fas fa-building"></i> Anthropic Academy</span>
+                            <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-view-btn" target="_blank">View Certificate</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="CS50 SQL.png" alt="CS50 SQL Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <h3>CS50's Introduction to Databases with SQL</h3>
-                        <p>Relational databases, schema design, complex queries, and optimization using SQLite and PostgreSQL.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Harvard University</span>
-                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-view-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="Imperial Math.png" alt="Imperial Math Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <h3>Mathematics for Machine Learning Specialization</h3>
-                        <p>Linear algebra, multivariate calculus, and PCA — the mathematical foundations of modern ML algorithms.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Imperial College London</span>
-                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-view-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="nvidia RAG.png" alt="NVIDIA RAG Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <h3>Building RAG Agents with LLMs</h3>
-                        <p>Designing and deploying Retrieval-Augmented Generation pipelines using vector databases, LLMs, and LangChain.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> NVIDIA Deep Learning Institute</span>
-                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-view-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                </article>
-
+                <!-- Gen-AI: Intro to MCP -->
                 <article class="certificate-card">
                     <div class="certificate-image">
                         <img src="Intro to MCP.png" alt="Anthropic MCP Certificate">
@@ -411,7 +389,79 @@
                     </div>
                 </article>
 
+                <!-- Gen-AI: NVIDIA RAG -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="nvidia RAG.png" alt="NVIDIA RAG Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Building RAG Agents with LLMs</h3>
+                        <p>Designing and deploying Retrieval-Augmented Generation pipelines using vector databases, LLMs, and LangChain.</p>
+                        <div class="certificate-footer">
+                            <span class="certificate-issuer"><i class="fas fa-building"></i> NVIDIA Deep Learning Institute</span>
+                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-view-btn" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </article>
+            </div><!-- end #certs-visible -->
+
+                <!-- Hidden Certifications -->
+            <div class="certificates-container" id="certs-hidden" style="display:none;">
+                <!-- ML: IBM Data Science -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="IBM Data Science.png" alt="IBM Data Science Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>IBM Data Science Specialization</h3>
+                        <p>End-to-end data science workflows covering Python, ML modeling, data visualization, and SQL for real-world datasets.</p>
+                        <div class="certificate-footer">
+                            <span class="certificate-issuer"><i class="fas fa-building"></i> IBM via Coursera</span>
+                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-view-btn" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <!-- Theoretical: CS50 SQL -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="CS50 SQL.png" alt="CS50 SQL Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>CS50's Introduction to Databases with SQL</h3>
+                        <p>Relational databases, schema design, complex queries, and optimization using SQLite and PostgreSQL.</p>
+                        <div class="certificate-footer">
+                            <span class="certificate-issuer"><i class="fas fa-building"></i> Harvard University</span>
+                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-view-btn" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Theoretical: Imperial Math -->
+                <article class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Imperial Math.png" alt="Imperial Math Certificate">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Mathematics for Machine Learning Specialization</h3>
+                        <p>Linear algebra, multivariate calculus, and PCA — the mathematical foundations of modern ML algorithms.</p>
+                        <div class="certificate-footer">
+                            <span class="certificate-issuer"><i class="fas fa-building"></i> Imperial College London</span>
+                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-view-btn" target="_blank">View Certificate</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- end #certs-hidden -->
+
+            <div class="read-more-container">
+                <button class="read-more-btn" id="certs-toggle-btn" onclick="toggleSection('certs-hidden', 'certs-toggle-btn')">
+                    <i class="fas fa-chevron-down"></i> Show More Certifications
+                </button>
             </div>
+
         </section>
 
         <!-- Contact Section -->
