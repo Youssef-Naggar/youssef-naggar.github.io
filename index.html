@@ -1,504 +1,766 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Naggar - AI Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Youssef Naggar - AI Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Youssef Naggar, 4th-Year AI Engineering Student at Cairo University, Ex-NBE & CIB Intern. Specializing in Deep Learning, Scalable ML Pipelines, and RAG Systems.">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="MyStyle.css">
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
+<body class="dark-mode">
+
+    <!-- 1. COVER PAGE (HEADER) -->
+    <header class="hero-cover" id="cover">
+        <div class="hero-content">
             <div class="profile-section">
-              <div class="profile-image-container">
-                <img src="profile-photo.jpg" alt="Youssef Naggar" class="profile-image" id="profile-image">
-              </div>
+                <div class="profile-image-container">
+                    <img src="assets/profile-photo.jpg" alt="Youssef Naggar - AI Engineer" class="profile-image" id="profile-image">
+                </div>
                 <div class="profile-text">
-                    <h1>Youssef Sami Naggar</h1>
-                    <p>AI Engineer & Computer Science Student</p>
-                    <a href="Youssef_Naggar_Resume.pdf" download class="resume-button">Download My Resume</a>
+                    <h1>Youssef Naggar</h1>
+                    <p class="profile-headline">
+                        AI Engineer || Ex-NBE & CIB Intern || Excellent Grade AI Student @ FCAI Cairo University
+                    </p>
+                    <div class="header-cta-group">
+                        <a href="Youssef_Naggar_Resume.pdf" download class="btn-primary">
+                            <i class="fas fa-file-arrow-down"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Navigation -->
-    <nav>
+    <nav class="main-nav" aria-label="Main Navigation">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-diagram-project"></i> Projects</a></li>
+            <li><a href="#certificate"><i class="fas fa-certificate"></i> Certificate</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <!-- About Section -->
+
+        <!-- 2. ABOUT ME -->
         <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <p>I'm a 3rd-year Computer Science student at Cairo University's Faculty of Computers and Artificial Intelligence, specializing in the AI department and ranked in the top 10 of my cohort. I'm passionate about machine learning, deep learning, and building end-to-end AI systems — from data pipelines to deployed models. I enjoy tackling complex problems with clean, efficient code and am constantly pushing the boundaries of what I can build and learn.</p>
-            <div class="language-list">
-                <div class="language-item">
-                    <strong>English:</strong> B2
-                </div>
-                <div class="language-item">
-                    <strong>Arabic:</strong> Native
+            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
+            
+            <div class="card">
+                <p class="about-bio">
+                    I am a Senior AI student at Cairo University (Faculty of Computers and Artificial Intelligence) specializing in building scalable ML pipelines and production RAG systems. Experienced in corporate infrastructure through NBE and CIB internships, I am focused on moving generative AI and deep learning architectures to production.
+                </p>
+                <p class="about-bio" style="margin-top: 1.2rem;">
+                    I empower small businesses and entrepreneurs to scale by analyzing their data to build the exact automation or ML pipeline, translating corporate infrastructure experience into resilient business solutions that fit their needs.
+                </p>
+
+                <div class="language-list">
+                    <div class="language-item">
+                        <i class="fas fa-globe" style="color: var(--theme-primary);"></i>
+                        <span><strong>English:</strong> B2 Professional</span>
+                    </div>
+                    <div class="language-item">
+                        <i class="fas fa-language" style="color: var(--theme-primary);"></i>
+                        <span><strong>Arabic:</strong> Native</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p><strong>Faculty of Computers and Artificial Intelligence, Cairo University</strong></p>
-                <p>Expected Graduation: 2027 (Currently in 3rd year)</p>
-                <p>GPA: 3.6/4.0 — Excellent | Ranked Top 10 in Cohort | Specialization: AI Department</p>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
+        <!-- 3. EXPERIENCE -->
         <section id="experience">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="education-card">
-                <h3>AI/ML Trainee — Elevvo Internship Program</h3>
-                <p><strong>Elevvo · 2025</strong></p>
-                <p>Contributed to five end-to-end machine learning projects spanning regression, classification, and time-series forecasting. Implemented and benchmarked diverse ML models using Python, Scikit-learn, and XGBoost, and deployed all work to GitHub to build a strong public portfolio.</p>
-            </div>
-            <div class="education-card">
-                <h3>Summer Intern — CIB Summer Program</h3>
-                <p><strong>Commercial International Bank (CIB) · 2025</strong></p>
-                <p>Participated in "The Green Leap," a structured program focused on ESG strategy and digital transformation in banking. Gained hands-on exposure to corporate governance, cybersecurity frameworks, and financial analysis across sessions led by senior CIB professionals.</p>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Enterprise Experience & Internships</h2>
+
+            <div class="experience-log-table">
+                <!-- DEPI -->
+                <div class="experience-log-row">
+                    <div class="exp-header">
+                        <span class="exp-role">Data Analyst Intern</span>
+                        <span class="exp-date">July 2026 - Present</span>
+                    </div>
+                    <div class="exp-org">Digital Egypt Pioneers Initiative (DEPI) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <ul class="exp-bullet-list">
+                        <li>Extracting, cleaning, and preparing multi-source datasets to conduct descriptive analysis and deliver actionable business insights.</li>
+                        <li>Building interactive data visualization dashboards and reporting pipelines to empower executive decision-making.</li>
+                        <li>Applying modern data analytics frameworks, statistical techniques, and ETL processes aligned with industry demands.</li>
+                    </ul>
+                </div>
+
+                <!-- NBE -->
+                <div class="experience-log-row">
+                    <div class="exp-header">
+                        <span class="exp-role">IT Infrastructure intern</span>
+                        <span class="exp-date">July 2026</span>
+                    </div>
+                    <div class="exp-org">National Bank of Egypt (NBE) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <ul class="exp-bullet-list">
+                        <li>Designed disaster recovery plans for critical data centers and core banking services.</li>
+                        <li>Contributed to the IT automation and disaster recovery sector to ensure the resilience of enterprise infrastructure.</li>
+                    </ul>
+                </div>
+
+                <!-- Elevvo -->
+                <div class="experience-log-row">
+                    <div class="exp-header">
+                        <span class="exp-role">AI/ML Trainee</span>
+                        <span class="exp-date">September 2025</span>
+                    </div>
+                    <div class="exp-org">Elevvo Internship Program &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <ul class="exp-bullet-list">
+                        <li>Developed 5 end-to-end ML pipelines across regression, classification, and time-series forecasting tasks using Python, Scikit-learn, and XGBoost, delivering production-ready models with documented results</li>
+                        <li>Evaluated and compared diverse machine learning models to identify the optimal architecture for each regression, classification, and forecasting task</li>
+                    </ul>
+                </div>
+
+                <!-- CIB -->
+                <div class="experience-log-row">
+                    <div class="exp-header">
+                        <span class="exp-role">Summer Intern</span>
+                        <span class="exp-date">August 2025</span>
+                    </div>
+                    <div class="exp-org">Commercial International Bank (CIB) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <ul class="exp-bullet-list">
+                        <li>Completed CIB’s competitive “The Green Leap” program, analyzing ESG data and digital transformation frameworks across Egyptian corporate case studies</li>
+                        <li>Conducted quantitative research on corporate governance and cybersecurity risk models, presenting findings to senior banking leaders</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- 4. EDUCATION -->
+        <section id="education">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+
+            <div class="card education-card">
+                <div class="education-header">
+                    <div>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <div class="education-school">Faculty of Computers and Artificial Intelligence, Cairo University</div>
+                    </div>
+                    <span class="metric-badge">
+                        <i class="fas fa-calendar-check"></i> Expected 2027 (Currently 4th Year)
+                    </span>
+                </div>
+                <div class="education-metrics">
+                    <span class="metric-badge"><i class="fas fa-bolt"></i> GPA: 3.58 / 4.0 - Excellent</span>
+                    <span class="metric-badge"><i class="fas fa-award"></i> Ranked Top 10 in Cohort</span>
+                    <span class="metric-badge"><i class="fas fa-microchip"></i> AI Major</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SKILLS -->
         <section id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul class="skill-list">
-                        <li>C++</li>
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Bash</li>
-                    </ul>
+            <h2 class="section-title"><i class="fas fa-code"></i> Skills Matrix</h2>
+
+            <div class="skills-matrix">
+                <div class="skill-panel">
+                    <h3><i class="fas fa-terminal"></i> Programming Languages</h3>
+                    <div class="skill-chips">
+                        <span class="tech-chip">Python</span>
+                        <span class="tech-chip">C++</span>
+                        <span class="tech-chip">SQL</span>
+                        <span class="tech-chip">Bash</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Technologies & Libraries</h3>
-                    <ul class="skill-list">
-                        <li>NumPy / CuPy</li>
-                        <li>Pandas</li>
-                        <li>Scikit-learn</li>
-                        <li>XGBoost / CatBoost</li>
-                        <li>PyTorch</li>
-                        <li>Optuna</li>
-                        <li>LangChain</li>
-                    </ul>
+
+                <div class="skill-panel">
+                    <h3><i class="fas fa-brain"></i> ML / AI & Libraries</h3>
+                    <div class="skill-chips">
+                        <span class="tech-chip">PyTorch</span>
+                        <span class="tech-chip">Scikit-learn</span>
+                        <span class="tech-chip">XGBoost</span>
+                        <span class="tech-chip">CatBoost</span>
+                        <span class="tech-chip">LightGBM</span>
+                        <span class="tech-chip">NumPy / CuPy</span>
+                        <span class="tech-chip">Pandas</span>
+                        <span class="tech-chip">Optuna</span>
+                        <span class="tech-chip">LangChain</span>
+                        <span class="tech-chip">LiteLLM</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <ul class="skill-list">
-                        <li>VSCode</li>
-                        <li>CLion</li>
-                        <li>PyCharm</li>
-                        <li>Git</li>
-                    </ul>
+
+                <div class="skill-panel">
+                    <h3><i class="fas fa-server"></i> Tools & Infrastructure</h3>
+                    <div class="skill-chips">
+                        <span class="tech-chip">Docker</span>
+                        <span class="tech-chip">Git</span>
+                        <span class="tech-chip">VSCode</span>
+                        <span class="tech-chip">CLion</span>
+                        <span class="tech-chip">PyCharm</span>
+                        <span class="tech-chip">Textual (TUI)</span>
+                        <span class="tech-chip">Pytest</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- 6. PROJECTS -->
         <section id="projects">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title"><i class="fas fa-network-wired"></i> Projects & Interactive Systems</h2>
 
-            <!-- Visible Projects (first 3) -->
-            <div id="projects-visible">
+            <div class="projects-stack">
 
-                <!-- Project 1: Weather Wizard 3000 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank" class="project-title-link">Weather Wizard 3000</a></h3>
-                    <img src="weather wizard 3000.png" alt="Weather Wizard 3000" class="project-vertical-image">
-                    <div class="project-description">
-                        <p>A personal weather forecasting assistant that provides 5-day forecasts and AI-powered outfit recommendations. Built in Python, this application leverages the OpenWeatherMap API for accurate weather data and Google's Gemini API for intelligent clothing suggestions based on current weather conditions.</p>
+                <!-- Project 1: Email Fraud Detection (2D Interactive Stacking Architecture) -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h3 class="project-title">
+                                <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank">
+                                    Email Fraud Detection Pipeline
+                                </a>
+                            </h3>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Tri-Stream Stacking Ensemble + Deep Autoencoder</span>
+                        </div>
+                        <span class="project-badge">F2: 0.8842 | 90.5% Recall | ROC-AUC: 0.999</span>
                     </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
+
+                    <!-- Canvas Asset for Stacking Architecture -->
+                    <div class="visual-asset-container" id="fraud-canvas-container" style="height: 480px;">
+                        <canvas id="fraudCanvas" class="visual-canvas"></canvas>
+                    </div>
+
+                    <p class="project-desc">
+                        An end-to-end fraud classification architecture built on 447K Enron emails to resolve an extreme 192:1 class imbalance. Incorporates a custom PyTorch Deep Autoencoder to compress 384-dimensional MiniLM embeddings into 64-dimensional latents and derive unsupervised anomaly reconstruction error signals, stacked with a Tri-Stream Level-1 GBDT ensemble and an ElasticNet meta-learner.
+                    </p>
+
+                    <div class="specs-box">
+                        <h4>System Specifications:</h4>
                         <ul>
-                            <li>5-day weather forecast with detailed information</li>
-                            <li>Multiple location options (city search, IP-based auto-detection, manual coordinates)</li>
-                            <li>Comprehensive weather data including temperature, humidity, and rain predictions</li>
-                            <li>AI-powered outfit suggestions tailored to weather conditions</li>
-                            <li>User-friendly command-line interface with emoji-enhanced output</li>
+                            <li>PyTorch Autoencoder: 384-d MiniLM compressed into 64-d latents + unsupervised anomaly MSE reconstruction signal.</li>
+                            <li>Tri-Stream Level-1 Models: Stream A (GPU XGBoost), Stream B (CatBoost with native text dictionaries), Stream C (LightGBM on TF-IDF n-grams).</li>
+                            <li>Level-2 Stacking Meta-Learner: ElasticNet meta-learner in logit space with 12 skip-connection domain features (VADER polarity, stylometry, sender velocity).</li>
+                            <li>Dynamic Threshold Tuning: tau* = 0.050 achieving 0.8842 F2-score, 90.5% recall, 80.8% precision, and 0.999 ROC-AUC.</li>
                         </ul>
                     </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">API Integration</span>
-                        <span class="tech-tag">OpenWeatherMap</span>
-                        <span class="tech-tag">Google Gemini</span>
-                        <span class="tech-tag">Data Processing</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
 
-                <!-- Project 2: Dog Breed Classifier -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank" class="project-title-link">Dog Breed Classifier</a></h3>
-                    <div class="project-description">
-                        <p>A high-accuracy image classification system trained on the Stanford Dogs dataset, spanning 120 distinct breeds. The pipeline goes beyond a simple fine-tuning job — it handles bounding-box-based image cropping to eliminate background noise, applies MixUp augmentation to improve generalization, and fine-tunes ConvNeXt-V2 to push accuracy well past baseline CNN approaches.</p>
+                    <div class="tags-group">
+                        <span class="telemetry-tag">PyTorch</span>
+                        <span class="telemetry-tag">XGBoost</span>
+                        <span class="telemetry-tag">CatBoost</span>
+                        <span class="telemetry-tag">LightGBM</span>
+                        <span class="telemetry-tag">Autoencoders</span>
+                        <span class="telemetry-tag">MiniLM</span>
+                        <span class="telemetry-tag">Optuna</span>
                     </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank">
+                            <i class="fab fa-github"></i> View GitHub Repository
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2: Weather Wizard 3000 (Interactive Animated RAG Pipeline) -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h3 class="project-title">
+                                <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank">
+                                    Weather Wizard 3000
+                                </a>
+                            </h3>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorless RAG + LiteLLM Multi-Modal Engine</span>
+                        </div>
+                        <span class="project-badge">LiteLLM + Vectorless RAG</span>
+                    </div>
+
+                    <!-- Canvas Asset for RAG Pipeline -->
+                    <div class="visual-asset-container" id="rag-canvas-container" style="height: 380px;">
+                        <canvas id="ragCanvas" class="visual-canvas"></canvas>
+                    </div>
+
+                    <p class="project-desc">
+                        A personalized AI outfit recommendation assistant leveraging Vectorless RAG and LiteLLM for SDK-agnostic model routing. Synthesizes 5-day real-time OpenWeatherMap forecasts with structured multimodal closet inventories and user preferences to generate grounded, weather-appropriate wardrobe suggestions with virtual avatar rendering.
+                    </p>
+
+                    <div class="specs-box">
+                        <h4>System Specifications:</h4>
                         <ul>
-                            <li>Fine-tuned ConvNeXt-V2 on 120 dog breeds with 90.5% test accuracy</li>
-                            <li>Automated bounding-box preprocessing to crop subjects and reduce background noise</li>
-                            <li>MixUp augmentation for improved cross-class generalization</li>
-                            <li>Full PyTorch training loop with learning rate scheduling</li>
-                            <li>End-to-end pipeline from raw dataset to inference-ready model</li>
+                            <li>Multimodal Closet Synthesizer: Processes clothing photos via Vision LLM into structured metadata stored in closet.json.</li>
+                            <li>Grounded LLM Weather Wizard: Filters real-time weather forecasts and dynamically matches seasonal attributes with available wardrobe items.</li>
+                            <li>Virtual Avatar Drawer: Generates personalized visual demo previews combining user avatar and recommended outfit items.</li>
+                            <li>Employs LiteLLM for seamless SDK-agnostic model switching and automated IP/GPS geolocation detection.</li>
                         </ul>
                     </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">ConvNeXt-V2</span>
-                        <span class="tech-tag">MixUp Augmentation</span>
-                        <span class="tech-tag">Computer Vision</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
 
-                <!-- Project 3: Email Fraud Detector -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank" class="project-title-link">Email Fraud Detector</a></h3>
-                    <div class="project-description">
-                        <p>A production-grade fraud detection pipeline built on the Enron email dataset — 447K emails with a brutal 192:1 class imbalance. The system combines rich email metadata with NLP-derived features (VADER sentiment scores and MiniLM sentence embeddings) to give CatBoost the signal it needs to surface fraudulent emails with high recall, evaluated using F2-score to prioritize catching fraud over precision.</p>
+                    <div class="tags-group">
+                        <span class="telemetry-tag">Python</span>
+                        <span class="telemetry-tag">LiteLLM</span>
+                        <span class="telemetry-tag">Vectorless RAG</span>
+                        <span class="telemetry-tag">OpenWeatherMap</span>
+                        <span class="telemetry-tag">Multimodal Vision</span>
                     </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank">
+                            <i class="fab fa-github"></i> View GitHub Repository
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3: Dog Breed Classifier (ConvNeXt-V2) -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h3 class="project-title">
+                                <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank">
+                                    Dog Breed Classifier (ConvNeXt-V2)
+                                </a>
+                            </h3>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Computer Vision Fine-Tuning Pipeline</span>
+                        </div>
+                        <span class="project-badge">90.5% Test Accuracy (120 Breeds)</span>
+                    </div>
+
+                    <p class="project-desc">
+                        A deep learning computer vision pipeline trained on the Stanford Dogs dataset across 120 breeds. Features automated bounding-box image preprocessing to isolate subjects, MixUp data augmentation for cross-class generalization, and fine-tuning of ConvNeXt-V2 in PyTorch with customized learning rate scheduling.
+                    </p>
+
+                    <div class="specs-box">
+                        <h4>System Specifications:</h4>
                         <ul>
-                            <li>Achieved 0.847 F2-score on a heavily imbalanced 447K-email dataset</li>
-                            <li>Combined email metadata with VADER sentiment and MiniLM semantic embeddings</li>
-                            <li>CatBoost model with hyperparameter tuning via Optuna</li>
-                            <li>Handled extreme class imbalance (192:1) through strategic sampling and class weighting</li>
-                            <li>Full feature engineering pipeline across text content and structural email fields</li>
+                            <li>Architecture: ConvNeXt-V2 with 7x7 depthwise convs, inverted bottleneck blocks, and Global Response Normalization (GRN).</li>
+                            <li>Preprocessing: Automated bounding-box image cropping to normalize training data and eliminate background noise.</li>
+                            <li>Generalization: MixUp augmentation and cosine annealing learning rate scheduler in PyTorch.</li>
                         </ul>
                     </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">CatBoost</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">MiniLM Embeddings</span>
-                        <span class="tech-tag">VADER</span>
-                        <span class="tech-tag">Optuna</span>
+
+                    <div class="tags-group">
+                        <span class="telemetry-tag">PyTorch</span>
+                        <span class="telemetry-tag">ConvNeXt-V2</span>
+                        <span class="telemetry-tag">MixUp</span>
+                        <span class="telemetry-tag">Computer Vision</span>
                     </div>
+
                     <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank">
+                            <i class="fab fa-github"></i> View GitHub Repository
+                        </a>
                     </div>
+                </article>
+
+                <!-- Hidden Projects Container for Show More / Show Less -->
+                <div id="projects-hidden" style="display: none; flex-direction: column; gap: 3rem;">
+
+                    <!-- Project 4: MicroGrad (Interactive Multi-Layer Perceptron) -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <h3 class="project-title">
+                                    <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank">
+                                        MicroGrad - Custom Neural Network Engine
+                                    </a>
+                                </h3>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorized Backpropagation Engine + GPU Acceleration</span>
+                            </div>
+                            <span class="project-badge">84% EMNIST Match (CuPy GPU)</span>
+                        </div>
+
+                        <!-- Interactive NN Controls -->
+                        <div class="sim-toolbar" id="micrograd-toolbar">
+                            <div class="sim-btn-group">
+                                <button type="button" class="sim-btn sim-btn-blue" id="btn-mg-forward">
+                                    <i class="fas fa-play"></i> Run Forward Pass (a = &sigma;(Wx+b))
+                                </button>
+                                <button type="button" class="sim-btn sim-btn-red" id="btn-mg-backprop">
+                                    <i class="fas fa-backward-step"></i> Run Backprop (&nabla;L Chain Rule)
+                                </button>
+                            </div>
+                            <div class="sim-telemetry-pill" id="mg-telemetry">
+                                <span class="status-pulse"></span>
+                                <span id="mg-telemetry-text">Vectorized Python / CuPy Engine | Loss: 0.0412</span>
+                            </div>
+                        </div>
+
+                        <!-- Canvas Asset for MicroGrad NN -->
+                        <div class="visual-asset-container" id="micrograd-canvas-container" style="height: 420px;">
+                            <canvas id="microgradCanvas" class="visual-canvas"></canvas>
+                        </div>
+
+                        <p class="project-desc">
+                            A ground-up implementation of a neural network engine in Python with vectorized backpropagation, Momentum SGD, and GPU acceleration via CuPy. Matches PyTorch benchmark performance (84% test accuracy on EMNIST) without relying on external deep learning frameworks.
+                        </p>
+
+                        <div class="specs-box">
+                            <h4>System Specifications:</h4>
+                            <ul>
+                                <li>Forward & Backward Engine: Pure Python matrix calculus with vectorized derivatives for ReLU, Sigmoid, and Tanh.</li>
+                                <li>Optimization: Momentum SGD optimizer with He and Xavier weight initialization schemes.</li>
+                                <li>Hardware Acceleration: CuPy integration for high-throughput GPU matrix operations with automatic CPU fallback.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags-group">
+                            <span class="telemetry-tag">Python</span>
+                            <span class="telemetry-tag">NumPy</span>
+                            <span class="telemetry-tag">CuPy GPU</span>
+                            <span class="telemetry-tag">Matrix Calculus</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: UltraTube (Interactive TUI Media Carousel - Clean Without Labels) -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <h3 class="project-title">
+                                    <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank">
+                                        UltraTube - Asynchronous TUI Media Downloader
+                                    </a>
+                                </h3>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Textual Terminal UI + Pytest Suite</span>
+                            </div>
+                            <span class="project-badge">Textual TUI + AsyncIO</span>
+                        </div>
+
+                        <!-- Carousel Visual Container (Click image to open fullscreen gallery modal) -->
+                        <div class="ultratube-carousel">
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-1.jpeg" alt="UltraTube Screenshot 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-2.jpeg" alt="UltraTube Screenshot 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-3.jpeg" alt="UltraTube Screenshot 3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-4.jpeg" alt="UltraTube Screenshot 4">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-5.jpeg" alt="UltraTube Screenshot 5">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-6.jpeg" alt="UltraTube Screenshot 6">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-7.jpeg" alt="UltraTube Screenshot 7">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-8.jpeg" alt="UltraTube Screenshot 8">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/ultratube images/ultratube-9.jpeg" alt="UltraTube Screenshot 9">
+                            </div>
+                        </div>
+
+                        <p class="project-desc">
+                            A high-performance, multi-tab asynchronous Terminal User Interface (TUI) application built with Python's Textual framework and yt-dlp. Features parallel queue processing, live download progress bars, metadata processing (merging audio tracks, thumbnails, and dual subtitles), and comprehensive test coverage following Dependency Inversion.
+                        </p>
+
+                        <div class="tags-group">
+                            <span class="telemetry-tag">Python</span>
+                            <span class="telemetry-tag">Textual (TUI)</span>
+                            <span class="telemetry-tag">yt-dlp</span>
+                            <span class="telemetry-tag">FFmpeg</span>
+                            <span class="telemetry-tag">Pytest</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Wordle Combination Finder -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <h3 class="project-title">
+                                    <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank">
+                                        Wordle Combination Finder
+                                    </a>
+                                </h3>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Information Gain Optimization Algorithm</span>
+                            </div>
+                            <span class="project-badge">+8% Heuristic Superiority</span>
+                        </div>
+                        <p class="project-desc">
+                            An algorithmic search system identifying optimal 4-word starting combinations for Wordle using letter position frequency analysis, a custom Trie data structure, and parallel backtracking with multiprocessing.
+                        </p>
+                        <div class="specs-box">
+                            <h4>Key Finding:</h4>
+                            <ul>
+                                <li>Optimal 4-word combination: <code>['HOWFS', 'IXTLE', 'JUMBY', 'KRANG']</code> with a score of 2659, outperforming commonly cited combinations by 8%.</li>
+                            </ul>
+                        </div>
+                        <div class="tags-group">
+                            <span class="telemetry-tag">Python</span>
+                            <span class="telemetry-tag">Algorithms</span>
+                            <span class="telemetry-tag">Trie</span>
+                            <span class="telemetry-tag">Multiprocessing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: Monster Wrangler Game -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div>
+                                <h3 class="project-title">
+                                    <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank">
+                                        Monster Wrangler Game
+                                    </a>
+                                </h3>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">2D Arcade Game Engine</span>
+                            </div>
+                            <span class="project-badge">Pygame OOP</span>
+                        </div>
+                        <!-- Carousel Visual Container (Same Layout as UltraTube) -->
+                        <div class="ultratube-carousel monster-gallery">
+                            <div class="carousel-slide">
+                                <img src="assets/Monster wrangler/Monster Wrangler image 1.png" alt="Monster Wrangler Screenshot 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/Monster wrangler/Monster Wrangler image 2.png" alt="Monster Wrangler Screenshot 2">
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A fast-paced 2D arcade game built with Pygame featuring object-oriented game state management, sprite animation, dynamic collision handling, and progressive difficulty.
+                        </p>
+                        <div class="tags-group">
+                            <span class="telemetry-tag">Python</span>
+                            <span class="telemetry-tag">Pygame</span>
+                            <span class="telemetry-tag">OOP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank">
+                                <i class="fab fa-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
 
-            </div><!-- end #projects-visible -->
-
-            <!-- Hidden Projects (rest) -->
-            <div id="projects-hidden" style="display:none;">
-
-                <!-- Project 4: Neural Network from Scratch -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank" class="project-title-link">Neural Network from Scratch</a></h3>
-                    <div class="project-description">
-                        <p>A fully custom neural network engine built in pure NumPy/CuPy — no frameworks, no autograd. This project is a ground-up implementation of everything that makes deep learning tick: vectorized forward and backward passes, multiple activation functions with correct derivatives, momentum SGD, He/Xavier weight initialization, and GPU acceleration via CuPy. The result matches PyTorch's accuracy on the same benchmark, tested on the EMNIST dataset.</p>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Matched PyTorch's 84% benchmark accuracy on the EMNIST dataset via hand-coded vectorized backpropagation</li>
-                            <li>Supports ReLU, Sigmoid, Tanh activations with analytically correct derivatives</li>
-                            <li>Momentum SGD optimizer with configurable hyperparameters</li>
-                            <li>He and Xavier weight initialization based on activation type</li>
-                            <li>GPU acceleration through CuPy with automatic CPU fallback</li>
-                            <li>Mini-batch training with per-epoch loss and accuracy tracking</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">CuPy</span>
-                        <span class="tech-tag">Deep Learning</span>
-                        <span class="tech-tag">EMNIST</span>
-                        <span class="tech-tag">GPU Acceleration</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/NN_from_scratch" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
+                <!-- Projects Toggle Button -->
+                <div class="read-more-wrapper">
+                    <button class="read-more-btn" id="projects-toggle-btn" onclick="toggleSection('projects-hidden', 'projects-toggle-btn', 'Show More Projects', 'Show Less Projects')">
+                        <i class="fas fa-chevron-down"></i> Show More Projects
+                    </button>
                 </div>
 
-                <!-- Project 5: Wordle Combination Finder -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank" class="project-title-link">Wordle Combination Finder</a></h3>
-                    <div class="project-description">
-                        <p>An algorithmic solution to find the optimal word combinations for the popular Wordle game. This project analyzes letter frequencies and their positions to identify sets of words that maximize information gain and efficiently narrow down possible solutions in Wordle.</p>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Data collection and filtering of Wordle-compatible words</li>
-                            <li>Letter position frequency analysis</li>
-                            <li>Advanced scoring system based on letter frequencies in specific positions</li>
-                            <li>Trie data structure implementation for efficient word storage and retrieval</li>
-                            <li>Backtracking algorithm with multiprocessing for optimal combination finding</li>
-                            <li>Discovered superior four-word combination outperforming popular strategies by 8%</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Data Analysis</span>
-                        <span class="tech-tag">Algorithms</span>
-                        <span class="tech-tag">Multiprocessing</span>
-                        <span class="tech-tag">Web Scraping</span>
-                    </div>
-                    <div class="project-results">
-                        <h4>Key Finding:</h4>
-                        <p>Optimal 4-word combination: ['HOWFS', 'IXTLE', 'JUMBY', 'KRANG'] with a score of 2659, outperforming commonly cited combinations by 8%.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 6: UltraTube -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank" class="project-title-link">UltraTube - YouTube Media Downloader</a></h3>
-                    <div class="project-description">
-                        <p>A powerful command-line application for downloading YouTube content with advanced features. UltraTube goes beyond basic downloaders by supporting multiple audio tracks, subtitle options, and various quality settings while preserving metadata and providing a user-friendly interface.</p>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Flexible media options (video or audio-only downloads)</li>
-                            <li>Multiple audio track selection (including dubbed versions)</li>
-                            <li>Comprehensive subtitle support in multiple languages</li>
-                            <li>Enhanced metadata handling (thumbnails, chapters, tags)</li>
-                            <li>User-friendly interface with clear prompts and error handling</li>
-                            <li>Built with yt-dlp and FFmpeg for powerful media processing</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">yt-dlp</span>
-                        <span class="tech-tag">FFmpeg</span>
-                        <span class="tech-tag">API Integration</span>
-                        <span class="tech-tag">Command Line Interface</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 7: Monster Wrangler -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank" class="project-title-link">Monster Wrangler Game</a></h3>
-                    <div class="project-images">
-                        <img src="Monster Wrangler image 1.png" alt="Monster Wrangler image 1" class="project-horizontal-image">
-                        <img src="Monster Wrangler image 2.png" alt="Monster Wrangler image 2" class="project-horizontal-image">
-                    </div>
-                    <div class="project-description">
-                        <p>A fast-paced 2D arcade-style game built with Pygame where players control a knight who must catch specific colored monsters while avoiding others. The game features progressive difficulty, lives system, and special abilities, all implemented with object-oriented design principles.</p>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Arcade-style gameplay with progressive difficulty</li>
-                            <li>Object-oriented design with custom classes for game entities</li>
-                            <li>Collision detection and state management systems</li>
-                            <li>Lives and special abilities (warps) systems</li>
-                            <li>Custom sprites and game assets</li>
-                            <li>Scoring system based on round progression</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pygame</span>
-                        <span class="tech-tag">OOP</span>
-                        <span class="tech-tag">Game Development</span>
-                        <span class="tech-tag">Sprite Animation</span>
-                    </div>
-                    <div class="project-controls">
-                        <h4>Controls:</h4>
-                        <p>Arrow keys to move the knight, Space to use warp ability or start a new game.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                    </div>
-                </div>
-
-            </div><!-- end #projects-hidden -->
-
-            <div class="read-more-container">
-                <button class="read-more-btn" id="projects-toggle-btn" onclick="toggleSection('projects-hidden', 'projects-toggle-btn')">
-                    <i class="fas fa-chevron-down"></i> Show More Projects
-                </button>
             </div>
-
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2 class="section-title">Certifications & Courses</h2>
-            <p class="section-subtitle">Professional certifications and courses I've completed to enhance my skills</p>
+        <!-- 7. CERTIFICATE -->
+        <section id="certificate">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Verified Certifications</h2>
 
-            <div class="certificates-container" id="certs-visible">
-
-                <!-- Gen-AI: Advance MCP -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="Advanced MCP.png" alt="Advance MCP Certificate">
+            <div class="certs-grid">
+                <!-- Cert 1 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/Advanced MCP.png" alt="Anthropic MCP Advanced Certificate">
                     </div>
-                    <div class="certificate-content">
+                    <div class="cert-body">
                         <h3>MCP Advanced Topics</h3>
-                        <p>Advanced techniques for building and deploying MCP servers, enabling LLMs to interact with complex external systems and agentic workflows at scale.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Anthropic Academy</span>
-                            <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-view-btn" target="_blank">View Certificate</a>
+                        <p>Advanced architectures for building and deploying MCP servers, connecting LLMs with external tools and agentic tool pipelines.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Gen-AI: Intro to MCP -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="Intro to MCP.png" alt="Anthropic MCP Certificate">
+                <!-- Cert 2 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/Intro to MCP.png" alt="Anthropic Intro to MCP Certificate">
                     </div>
-                    <div class="certificate-content">
-                        <h3>Introduction to MCP (Model Context Protocol)</h3>
-                        <p>Building and integrating MCP servers to connect LLMs with external tools, APIs, and data sources for agentic workflows.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Anthropic Academy</span>
-                            <a href="https://verify.skilljar.com/c/kz9dt6omu9a4" class="cert-view-btn" target="_blank">View Certificate</a>
+                    <div class="cert-body">
+                        <h3>Introduction to MCP</h3>
+                        <p>Building MCP servers to connect LLMs with custom external tools, database systems, and agentic workflows.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <a href="https://verify.skilljar.com/c/kz9dt6omu9a4" class="cert-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Gen-AI: NVIDIA RAG -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="nvidia RAG.png" alt="NVIDIA RAG Certificate">
+                <!-- Cert 3 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/nvidia RAG.png" alt="NVIDIA RAG Certificate">
                     </div>
-                    <div class="certificate-content">
+                    <div class="cert-body">
                         <h3>Building RAG Agents with LLMs</h3>
-                        <p>Designing and deploying Retrieval-Augmented Generation pipelines using vector databases, LLMs, and LangChain.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> NVIDIA Deep Learning Institute</span>
-                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-view-btn" target="_blank">View Certificate</a>
+                        <p>Designing scalable Retrieval-Augmented Generation pipelines using vector embeddings, LangChain, and high-throughput LLMs.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-microchip"></i> NVIDIA DLI</span>
+                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
                 </article>
-            </div><!-- end #certs-visible -->
+            </div>
 
-                <!-- Hidden Certifications -->
-            <div class="certificates-container" id="certs-hidden" style="display:none;">
-                <!-- ML: IBM Data Science -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="IBM Data Science.png" alt="IBM Data Science Certificate">
+            <!-- Hidden Certifications Container for Show More / Show Less -->
+            <div id="certs-hidden" style="display: none; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <!-- Cert 4 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/IBM Data Science.png" alt="IBM Data Science Certificate">
                     </div>
-                    <div class="certificate-content">
-                        <h3>IBM Data Science Specialization</h3>
-                        <p>End-to-end data science workflows covering Python, ML modeling, data visualization, and SQL for real-world datasets.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> IBM via Coursera</span>
-                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-view-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                </article>
-
-
-
-                <!-- Theoretical: CS50 SQL -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="CS50 SQL.png" alt="CS50 SQL Certificate">
-                    </div>
-                    <div class="certificate-content">
-                        <h3>CS50's Introduction to Databases with SQL</h3>
-                        <p>Relational databases, schema design, complex queries, and optimization using SQLite and PostgreSQL.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Harvard University</span>
-                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-view-btn" target="_blank">View Certificate</a>
+                    <div class="cert-body">
+                        <h3>IBM Data Science Professional</h3>
+                        <p>End-to-end data science workflows covering Python, machine learning modeling, data visualization, and SQL on real datasets.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-database"></i> IBM via Coursera</span>
+                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Theoretical: Imperial Math -->
-                <article class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="Imperial Math.png" alt="Imperial Math Certificate">
+                <!-- Cert 5 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/CS50 SQL.png" alt="Harvard CS50 SQL Certificate">
                     </div>
-                    <div class="certificate-content">
-                        <h3>Mathematics for Machine Learning Specialization</h3>
-                        <p>Linear algebra, multivariate calculus, and PCA — the mathematical foundations of modern ML algorithms.</p>
-                        <div class="certificate-footer">
-                            <span class="certificate-issuer"><i class="fas fa-building"></i> Imperial College London</span>
-                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-view-btn" target="_blank">View Certificate</a>
+                    <div class="cert-body">
+                        <h3>CS50's Intro to Databases with SQL</h3>
+                        <p>Relational database design, schema normalization, query optimization, indexing, and transactions with SQLite and PostgreSQL.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-server"></i> Harvard University</span>
+                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
-            </div><!-- end #certs-hidden -->
+                <!-- Cert 6 -->
+                <article class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="assets/certificate images/Imperial Math.png" alt="Imperial College Math Certificate">
+                    </div>
+                    <div class="cert-body">
+                        <h3>Mathematics for Machine Learning</h3>
+                        <p>Linear algebra, multivariate calculus, and PCA foundations underpinning modern deep learning algorithms.</p>
+                        <div class="cert-footer">
+                            <span class="cert-issuer"><i class="fas fa-calculator"></i> Imperial College</span>
+                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-link" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-            <div class="read-more-container">
-                <button class="read-more-btn" id="certs-toggle-btn" onclick="toggleSection('certs-hidden', 'certs-toggle-btn')">
+            <!-- Certs Toggle Button -->
+            <div class="read-more-wrapper">
+                <button class="read-more-btn" id="certs-toggle-btn" onclick="toggleSection('certs-hidden', 'certs-toggle-btn', 'Show More Certifications', 'Show Less Certifications')">
                     <i class="fas fa-chevron-down"></i> Show More Certifications
                 </button>
             </div>
-
         </section>
 
-        <!-- Contact Section -->
+        <!-- 8. CONTACT ME -->
         <section id="contact">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p><a href="mailto:youssef.naggar.pro@gmail.com">youssef.naggar.pro@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Cairo, Egypt</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <p><a href="https://www.linkedin.com/in/youssef-naggar/" target="_blank">linkedin.com/in/youssef-naggar</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <p><a href="https://github.com/Youssef-Naggar" target="_blank">github.com/Youssef-Naggar</a></p>
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contact Me</h2>
+
+            <div class="contact-grid">
+                <!-- Email Card -->
+                <a href="mailto:youssef.naggar.pro@gmail.com" class="contact-card" aria-label="Send Email">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-label">Email</span>
+                        <span class="contact-card-value">youssef.naggar.pro@gmail.com</span>
+                    </div>
+                    <div class="contact-card-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/in/youssef-naggar/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn Profile">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-value">linkedin.com/in/youssef-naggar</span>
+                    </div>
+                    <div class="contact-card-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="https://github.com/Youssef-Naggar" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="GitHub Profile">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-label">GitHub</span>
+                        <span class="contact-card-value">github.com/Youssef-Naggar</span>
+                    </div>
+                    <div class="contact-card-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Location Card -->
+                <div class="contact-card location-card" aria-label="Location">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="contact-card-content">
+                        <span class="contact-card-label">Location</span>
+                        <span class="contact-card-value">Cairo, Egypt</span>
+                    </div>
+                    <div class="contact-card-arrow">
+                        <i class="fas fa-earth-africa"></i>
+                    </div>
                 </div>
             </div>
         </section>
+
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Youssef Sami Naggar. All rights reserved.</p>
-    </footer>
+    <!-- Image Lightbox / Gallery Modal (Fullscreen Enlarged View + Prev/Next Controls) -->
+    <div class="lightbox-modal" id="lightboxModal" aria-modal="true" role="dialog">
+        <div class="lightbox-container">
+            <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close Gallery">&times;</button>
+            <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrev" aria-label="Previous Image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="" alt="Enlarged Project Preview" class="lightbox-image" id="lightboxImg">
+            <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNext" aria-label="Next Image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+        </div>
+    </div>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-moon"></i>
+
+
+    <!-- Floating Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light and Dark Mode">
+        <i class="fas fa-sun"></i>
     </button>
 
-    <script type="text/javascript" src="script.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 
 </body>
 </html>

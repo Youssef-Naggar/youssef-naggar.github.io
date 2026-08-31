@@ -1,0 +1,15 @@
+# Markdown documentation & audit files
+*.md
+
+# Prototypes, draft files and alternative version experiments
+version-*.html
+code *.html
+css/
+js/
+Depi description.pdf
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
