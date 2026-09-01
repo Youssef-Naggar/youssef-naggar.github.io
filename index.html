@@ -7,8 +7,6 @@
     <meta name="description" content="Portfolio of Youssef Naggar, 4th-Year AI Engineering Student at Cairo University, Ex-NBE & CIB Intern. Specializing in Deep Learning, Scalable ML Pipelines, and RAG Systems.">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="MyStyle.css">
 </head>
@@ -209,11 +207,11 @@
 
         <!-- 6. PROJECTS -->
         <section id="projects">
-            <h2 class="section-title"><i class="fas fa-network-wired"></i> Projects & Interactive Systems</h2>
+            <h2 class="section-title"><i class="fas fa-diagram-project"></i> Featured Projects</h2>
 
             <div class="projects-stack">
 
-                <!-- Project 1: Email Fraud Detection (2D Interactive Stacking Architecture) -->
+                <!-- Project 1: Email Fraud Detection Pipeline -->
                 <article class="project-card">
                     <div class="project-card-header">
                         <div>
@@ -225,11 +223,6 @@
                             <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Tri-Stream Stacking Ensemble + Deep Autoencoder</span>
                         </div>
                         <span class="project-badge">F2: 0.8842 | 90.5% Recall | ROC-AUC: 0.999</span>
-                    </div>
-
-                    <!-- Canvas Asset for Stacking Architecture -->
-                    <div class="visual-asset-container" id="fraud-canvas-container" style="height: 480px;">
-                        <canvas id="fraudCanvas" class="visual-canvas"></canvas>
                     </div>
 
                     <p class="project-desc">
@@ -263,7 +256,7 @@
                     </div>
                 </article>
 
-                <!-- Project 2: Weather Wizard 3000 (Interactive Animated RAG Pipeline) -->
+                <!-- Project 2: Weather Wizard 3000 -->
                 <article class="project-card">
                     <div class="project-card-header">
                         <div>
@@ -275,11 +268,6 @@
                             <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorless RAG + LiteLLM Multi-Modal Engine</span>
                         </div>
                         <span class="project-badge">LiteLLM + Vectorless RAG</span>
-                    </div>
-
-                    <!-- Canvas Asset for RAG Pipeline -->
-                    <div class="visual-asset-container" id="rag-canvas-container" style="height: 380px;">
-                        <canvas id="ragCanvas" class="visual-canvas"></canvas>
                     </div>
 
                     <p class="project-desc">
@@ -355,7 +343,7 @@
                 <!-- Hidden Projects Container for Show More / Show Less -->
                 <div id="projects-hidden" style="display: none; flex-direction: column; gap: 3rem;">
 
-                    <!-- Project 4: MicroGrad (Interactive Multi-Layer Perceptron) -->
+                    <!-- Project 4: MicroGrad (Custom Neural Network Engine) -->
                     <article class="project-card">
                         <div class="project-card-header">
                             <div>
@@ -367,27 +355,6 @@
                                 <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorized Backpropagation Engine + GPU Acceleration</span>
                             </div>
                             <span class="project-badge">84% EMNIST Match (CuPy GPU)</span>
-                        </div>
-
-                        <!-- Interactive NN Controls -->
-                        <div class="sim-toolbar" id="micrograd-toolbar">
-                            <div class="sim-btn-group">
-                                <button type="button" class="sim-btn sim-btn-blue" id="btn-mg-forward">
-                                    <i class="fas fa-play"></i> Run Forward Pass (a = &sigma;(Wx+b))
-                                </button>
-                                <button type="button" class="sim-btn sim-btn-red" id="btn-mg-backprop">
-                                    <i class="fas fa-backward-step"></i> Run Backprop (&nabla;L Chain Rule)
-                                </button>
-                            </div>
-                            <div class="sim-telemetry-pill" id="mg-telemetry">
-                                <span class="status-pulse"></span>
-                                <span id="mg-telemetry-text">Vectorized Python / CuPy Engine | Loss: 0.0412</span>
-                            </div>
-                        </div>
-
-                        <!-- Canvas Asset for MicroGrad NN -->
-                        <div class="visual-asset-container" id="micrograd-canvas-container" style="height: 420px;">
-                            <canvas id="microgradCanvas" class="visual-canvas"></canvas>
                         </div>
 
                         <p class="project-desc">
