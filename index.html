@@ -13,17 +13,22 @@
     <!-- Preload LCP Hero Image -->
     <link rel="preload" as="image" href="assets/profile-photo.webp" type="image/webp" fetchpriority="high">
 
-    <!-- Google Fonts (Loaded directly, requesting only active weights) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+    <!-- Stylesheet with Preload -->
+    <link rel="preload" href="MyStyle.css" as="style">
+    <link rel="stylesheet" href="MyStyle.css">
+
+    <!-- Non-render-blocking Google Fonts (Eliminates 750ms Mobile Render Blocking) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+    </noscript>
 
     <!-- Non-render-blocking Font Awesome Icons -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </noscript>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="MyStyle.css">
 </head>
 <body class="dark-mode">
 
