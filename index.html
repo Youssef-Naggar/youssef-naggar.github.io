@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youssef Naggar - AI Engineer Portfolio</title>
     <meta name="description" content="Portfolio of Youssef Naggar, 4th-Year AI Engineering Student at Cairo University, Ex-NBE & CIB Intern. Specializing in Deep Learning, Scalable ML Pipelines, and RAG Systems.">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Resource Hints for Fonts and CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/profile-photo.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Google Fonts (Loaded directly, requesting only active weights) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+
+    <!-- Non-render-blocking Font Awesome Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="MyStyle.css">
 </head>
@@ -17,7 +32,7 @@
         <div class="hero-content">
             <div class="profile-section">
                 <div class="profile-image-container">
-                    <img src="assets/profile-photo.jpg" alt="Youssef Naggar - AI Engineer" class="profile-image" id="profile-image">
+                    <img src="assets/profile-photo.webp" alt="Youssef Naggar - AI Engineer" class="profile-image" id="profile-image" width="210" height="210" fetchpriority="high" decoding="sync">
                 </div>
                 <div class="profile-text">
                     <h1>Youssef Naggar</h1>
@@ -401,31 +416,31 @@
                         <!-- Carousel Visual Container (Click image to open fullscreen gallery modal) -->
                         <div class="ultratube-carousel">
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-1.jpeg" alt="UltraTube Screenshot 1">
+                                <img src="assets/ultratube images/ultratube-1.webp" alt="UltraTube Screenshot 1" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-2.jpeg" alt="UltraTube Screenshot 2">
+                                <img src="assets/ultratube images/ultratube-2.webp" alt="UltraTube Screenshot 2" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-3.jpeg" alt="UltraTube Screenshot 3">
+                                <img src="assets/ultratube images/ultratube-3.webp" alt="UltraTube Screenshot 3" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-4.jpeg" alt="UltraTube Screenshot 4">
+                                <img src="assets/ultratube images/ultratube-4.webp" alt="UltraTube Screenshot 4" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-5.jpeg" alt="UltraTube Screenshot 5">
+                                <img src="assets/ultratube images/ultratube-5.webp" alt="UltraTube Screenshot 5" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-6.jpeg" alt="UltraTube Screenshot 6">
+                                <img src="assets/ultratube images/ultratube-6.webp" alt="UltraTube Screenshot 6" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-7.jpeg" alt="UltraTube Screenshot 7">
+                                <img src="assets/ultratube images/ultratube-7.webp" alt="UltraTube Screenshot 7" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-8.jpeg" alt="UltraTube Screenshot 8">
+                                <img src="assets/ultratube images/ultratube-8.webp" alt="UltraTube Screenshot 8" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/ultratube images/ultratube-9.jpeg" alt="UltraTube Screenshot 9">
+                                <img src="assets/ultratube images/ultratube-9.webp" alt="UltraTube Screenshot 9" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                         </div>
 
@@ -499,10 +514,10 @@
                         <!-- Carousel Visual Container (Same Layout as UltraTube) -->
                         <div class="ultratube-carousel monster-gallery">
                             <div class="carousel-slide">
-                                <img src="assets/Monster wrangler/Monster Wrangler image 1.png" alt="Monster Wrangler Screenshot 1">
+                                <img src="assets/Monster wrangler/Monster Wrangler image 1.webp" alt="Monster Wrangler Screenshot 1" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/Monster wrangler/Monster Wrangler image 2.png" alt="Monster Wrangler Screenshot 2">
+                                <img src="assets/Monster wrangler/Monster Wrangler image 2.webp" alt="Monster Wrangler Screenshot 2" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <p class="project-desc">
@@ -540,7 +555,7 @@
                 <!-- Cert 1 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/Advanced MCP.png" alt="Anthropic MCP Advanced Certificate">
+                        <img src="assets/certificate images/Advanced MCP.webp" alt="Anthropic MCP Advanced Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>MCP Advanced Topics</h3>
@@ -555,7 +570,7 @@
                 <!-- Cert 2 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/Intro to MCP.png" alt="Anthropic Intro to MCP Certificate">
+                        <img src="assets/certificate images/Intro to MCP.webp" alt="Anthropic Intro to MCP Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>Introduction to MCP</h3>
@@ -570,7 +585,7 @@
                 <!-- Cert 3 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/nvidia RAG.png" alt="NVIDIA RAG Certificate">
+                        <img src="assets/certificate images/nvidia RAG.webp" alt="NVIDIA RAG Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>Building RAG Agents with LLMs</h3>
@@ -588,7 +603,7 @@
                 <!-- Cert 4 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/IBM Data Science.png" alt="IBM Data Science Certificate">
+                        <img src="assets/certificate images/IBM Data Science.webp" alt="IBM Data Science Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>IBM Data Science Professional</h3>
@@ -603,7 +618,7 @@
                 <!-- Cert 5 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/CS50 SQL.png" alt="Harvard CS50 SQL Certificate">
+                        <img src="assets/certificate images/CS50 SQL.webp" alt="Harvard CS50 SQL Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>CS50's Intro to Databases with SQL</h3>
@@ -618,7 +633,7 @@
                 <!-- Cert 6 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper">
-                        <img src="assets/certificate images/Imperial Math.png" alt="Imperial College Math Certificate">
+                        <img src="assets/certificate images/Imperial Math.webp" alt="Imperial College Math Certificate" width="340" height="180" loading="lazy" decoding="async">
                     </div>
                     <div class="cert-body">
                         <h3>Mathematics for Machine Learning</h3>
@@ -727,7 +742,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>

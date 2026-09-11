@@ -5,9 +5,7 @@
    Theme: Blue (Primary) + Red (Secondary) in both Light & Dark modes
    Gradients: Pure Blue to Red
    ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-
+/* Fonts are now preconnected and loaded asynchronously in index.html to prevent render blocking */
 :root {
     /* ==========================================================================
        LIGHT MODE
@@ -193,6 +191,7 @@ header.hero-cover::before {
 .profile-image {
     width: 100%;
     height: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.95);
     object-fit: cover;
