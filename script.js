@@ -15,18 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
    ========================================================================== */
 function initThemeManager() {
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    const updateIcon = (isDark) => {
+        const useEl = themeToggleBtn ? themeToggleBtn.querySelector('use') : null;
+        if (useEl) {
+            useEl.setAttribute('href', isDark ? 'assets/icons/icons.svg#icon-sun' : 'assets/icons/icons.svg#icon-moon');
+        }
+    };
 
     // Load saved theme
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
     if (savedTheme === 'light') {
         document.documentElement.classList.remove('dark-mode');
         document.body.classList.remove('dark-mode');
-        if (icon) icon.className = 'fas fa-moon';
+        updateIcon(false);
     } else {
         document.documentElement.classList.add('dark-mode');
         document.body.classList.add('dark-mode');
-        if (icon) icon.className = 'fas fa-sun';
+        updateIcon(true);
     }
 
     if (themeToggleBtn) {
@@ -35,10 +40,7 @@ function initThemeManager() {
             document.documentElement.classList.toggle('dark-mode', isDark);
             const themeVal = isDark ? 'dark' : 'light';
             localStorage.setItem('portfolio-theme', themeVal);
-
-            if (icon) {
-                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-            }
+            updateIcon(isDark);
         });
     }
 }
@@ -64,8 +66,8 @@ const translations = {
         "about.title": "About Me",
         "about.bio1": "I am a Senior AI student at Cairo University (Faculty of Computers and Artificial Intelligence) specializing in building scalable ML pipelines and production RAG systems. Experienced in corporate infrastructure through NBE and CIB internships, I am focused on moving generative AI and deep learning architectures to production.",
         "about.bio2": "I empower small businesses and entrepreneurs to scale by analyzing their data to build the exact automation or ML pipeline, translating corporate infrastructure experience into resilient business solutions that fit their needs.",
-        "about.lang_en": `<i class="fas fa-globe" style="color: var(--theme-primary);"></i> <span><strong>English:</strong> B2 Professional</span>`,
-        "about.lang_ar": `<i class="fas fa-language" style="color: var(--theme-primary);"></i> <span><strong>Arabic:</strong> Native</span>`,
+        "about.lang_en": `<svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-globe"></use></svg> <span><strong>English:</strong> B2 Professional</span>`,
+        "about.lang_ar": `<svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-language"></use></svg> <span><strong>Arabic:</strong> Native</span>`,
         "experience.title": "Enterprise Experience & Internships",
         "experience.depi_role": "Data Analyst Intern",
         "experience.depi_date": "July 2026 - Present",
@@ -91,14 +93,14 @@ const translations = {
         "education.title": "Education",
         "education.degree": "Bachelor of Science in Computer Science",
         "education.school": "Faculty of Computers and Artificial Intelligence, Cairo University",
-        "education.badge_year": `<i class="fas fa-calendar-check"></i> Expected 2027 (Currently 4th Year)`,
-        "education.badge_gpa": `<i class="fas fa-bolt"></i> GPA: 3.58 / 4.0 - Excellent`,
-        "education.badge_rank": `<i class="fas fa-award"></i> Ranked Top 10 in Cohort`,
-        "education.badge_major": `<i class="fas fa-microchip"></i> AI Major`,
+        "education.badge_year": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calendar-check"></use></svg> Expected 2027 (Currently 4th Year)`,
+        "education.badge_gpa": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-bolt"></use></svg> GPA: 3.58 / 4.0 - Excellent`,
+        "education.badge_rank": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-award"></use></svg> Ranked Top 10 in Cohort`,
+        "education.badge_major": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> AI Major`,
         "skills.title": "Skills Matrix",
-        "skills.lang_title": `<i class="fas fa-terminal"></i> Programming Languages`,
-        "skills.ml_title": `<i class="fas fa-brain"></i> ML / AI & Libraries`,
-        "skills.tools_title": `<i class="fas fa-server"></i> Tools & Infrastructure`,
+        "skills.lang_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-terminal"></use></svg> Programming Languages`,
+        "skills.ml_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-brain"></use></svg> ML / AI & Libraries`,
+        "skills.tools_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> Tools & Infrastructure`,
         "projects.title": "Featured Projects",
         "projects.specs_title": "System Specifications:",
         "projects.finding_title": "Key Finding:",
@@ -154,22 +156,22 @@ const translations = {
         "certs.btn_less": "Show Less Certifications",
         "certs.c1_title": "MCP Advanced Topics",
         "certs.c1_desc": "Advanced architectures for building and deploying MCP servers, connecting LLMs with external tools and agentic tool pipelines.",
-        "certs.c1_issuer": `<i class="fas fa-cube"></i> Anthropic Academy`,
+        "certs.c1_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy`,
         "certs.c2_title": "Introduction to MCP",
         "certs.c2_desc": "Building MCP servers to connect LLMs with custom external tools, database systems, and agentic workflows.",
-        "certs.c2_issuer": `<i class="fas fa-cube"></i> Anthropic Academy`,
+        "certs.c2_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy`,
         "certs.c3_title": "Building RAG Agents with LLMs",
         "certs.c3_desc": "Designing scalable Retrieval-Augmented Generation pipelines using vector embeddings, LangChain, and high-throughput LLMs.",
-        "certs.c3_issuer": `<i class="fas fa-microchip"></i> NVIDIA DLI`,
+        "certs.c3_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> NVIDIA DLI`,
         "certs.c4_title": "IBM Data Science Professional",
         "certs.c4_desc": "End-to-end data science workflows covering Python, machine learning modeling, data visualization, and SQL on real datasets.",
-        "certs.c4_issuer": `<i class="fas fa-database"></i> IBM via Coursera`,
+        "certs.c4_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-database"></use></svg> IBM via Coursera`,
         "certs.c5_title": "CS50's Intro to Databases with SQL",
         "certs.c5_desc": "Relational database design, schema normalization, query optimization, indexing, and transactions with SQLite and PostgreSQL.",
-        "certs.c5_issuer": `<i class="fas fa-server"></i> Harvard University`,
+        "certs.c5_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> Harvard University`,
         "certs.c6_title": "Mathematics for Machine Learning",
         "certs.c6_desc": "Linear algebra, multivariate calculus, and PCA foundations underpinning modern deep learning algorithms.",
-        "certs.c6_issuer": `<i class="fas fa-calculator"></i> Imperial College`,
+        "certs.c6_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calculator"></use></svg> Imperial College`,
         "contact.title": "Contact Me",
         "contact.email_label": "Email",
         "contact.linkedin_label": "LinkedIn",
@@ -194,8 +196,8 @@ const translations = {
         "about.title": "نبذة عني",
         "about.bio1": "أنا طالب بالسنة النهائية في تخصص الذكاء الاصطناعي بكلية الحاسبات والذكاء الاصطناعي بجامعة القاهرة، متخصص في بناء خطوط معالجة تعلم الآلة القابلة للتوسع، أتمتة مسارات العمل، وأنظمة الـ RAG الموجهة لبيئات الإنتاج. بفضل خبرتي في البنية التحتية للمؤسسات من خلال فترات التدريب في البنك الأهلي المصري (NBE) والبنك التجاري الدولي (CIB)، أركز على نقل حلول الذكاء الاصطناعي التوليدي، لوحات البيانات التفاعلية، والأنظمة السحابية إلى بيئة العمل الفعلية.",
         "about.bio2": "أساعد الشركات الصغيرة ورواد الأعمال على التوسع عبر تحويل عملياتهم التشغيلية بالكامل إلى أنظمة مؤتمتة وقائمة على البيانات، مع ترجمة خبرات البنية التحتية المصرفية إلى حلول أعمال مرنة ومستضافة بتكلفة سحابية مجانية تماماً لتلائم احتياجاتهم بدقة.",
-        "about.lang_en": `<i class="fas fa-globe" style="color: var(--theme-primary);"></i> <span><strong>الإنجليزية:</strong> مستوى متقدم للعمل (B2 Professional)</span>`,
-        "about.lang_ar": `<i class="fas fa-language" style="color: var(--theme-primary);"></i> <span><strong>العربية:</strong> اللغة الأم (Native)</span>`,
+        "about.lang_en": `<svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-globe"></use></svg> <span><strong>الإنجليزية:</strong> مستوى متقدم للعمل (B2 Professional)</span>`,
+        "about.lang_ar": `<svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-language"></use></svg> <span><strong>العربية:</strong> اللغة الأم (Native)</span>`,
         "experience.title": "الخبرات المهنية وفترات التدريب",
         "experience.depi_role": "متدرب تحليل بيانات (Data Analyst Intern)",
         "experience.depi_date": "يوليو 2026 - حتى الآن",
@@ -221,14 +223,14 @@ const translations = {
         "education.title": "التعليم والمؤهلات الأكاديمية",
         "education.degree": "بكالوريوس في علوم الحاسب (B.Sc. in Computer Science)",
         "education.school": "كلية الحاسبات والذكاء الاصطناعي، جامعة القاهرة",
-        "education.badge_year": `<i class="fas fa-calendar-check"></i> متوقع التخرج 2027 (حالياً بالفرقة الرابعة)`,
-        "education.badge_gpa": `<i class="fas fa-bolt"></i> المعدل التراكمي: 3.58 / 4.0 - تقدير امتياز`,
-        "education.badge_rank": `<i class="fas fa-award"></i> ضمن أفضل 10 طلاب على مستوى الدفعة`,
-        "education.badge_major": `<i class="fas fa-microchip"></i> تخصص رئيسي: الذكاء الاصطناعي (AI Major)`,
+        "education.badge_year": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calendar-check"></use></svg> متوقع التخرج 2027 (حالياً بالفرقة الرابعة)`,
+        "education.badge_gpa": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-bolt"></use></svg> المعدل التراكمي: 3.58 / 4.0 - تقدير امتياز`,
+        "education.badge_rank": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-award"></use></svg> ضمن أفضل 10 طلاب على مستوى الدفعة`,
+        "education.badge_major": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> تخصص رئيسي: الذكاء الاصطناعي (AI Major)`,
         "skills.title": "مصفوفة المهارات التقنية",
-        "skills.lang_title": `<i class="fas fa-terminal"></i> لغات البرمجة`,
-        "skills.ml_title": `<i class="fas fa-brain"></i> الذكاء الاصطناعي ومكتبات تعلم الآلة`,
-        "skills.tools_title": `<i class="fas fa-server"></i> الأدوات والبنية التحتية`,
+        "skills.lang_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-terminal"></use></svg> لغات البرمجة`,
+        "skills.ml_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-brain"></use></svg> الذكاء الاصطناعي ومكتبات تعلم الآلة`,
+        "skills.tools_title": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> الأدوات والبنية التحتية`,
         "projects.title": "أبرز المشاريع",
         "projects.specs_title": "المواصفات التقنية للنظام:",
         "projects.finding_title": "النتيجة الخوارزمية الأساسية:",
@@ -284,22 +286,22 @@ const translations = {
         "certs.btn_less": "عرض شهادات أقل",
         "certs.c1_title": "موضوعات متقدمة في بروتوكول سياق النموذج (MCP)",
         "certs.c1_desc": "معماريات متقدمة لبناء ونشر خوادم بروتوكول MCP، وربط نماذج الذكاء الاصطناعي مع الأدوات الخارجية وأنظمة الوكلاء الأذكياء.",
-        "certs.c1_issuer": `<i class="fas fa-cube"></i> Anthropic Academy`,
+        "certs.c1_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy`,
         "certs.c2_title": "مقدمة في بروتوكول سياق النموذج (MCP)",
         "certs.c2_desc": "بناء خوادم MCP لربط نماذج اللغة الكبيرة (LLMs) بالأدوات البرمجية وقواعد البيانات ومسارات العمل المؤتمتة.",
-        "certs.c2_issuer": `<i class="fas fa-cube"></i> Anthropic Academy`,
+        "certs.c2_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy`,
         "certs.c3_title": "بناء وكلاء RAG باستخدام نماذج اللغة الكبيرة",
         "certs.c3_desc": "تصميم خطوط استرجاع وتوليد معزز (RAG) قابلة للتوسع باستخدام التضمينات المتجهة ومكتبة LangChain ونماذج فائقة الأداء.",
-        "certs.c3_issuer": `<i class="fas fa-microchip"></i> NVIDIA DLI`,
+        "certs.c3_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> NVIDIA DLI`,
         "certs.c4_title": "الاحتراف في علم البيانات من IBM",
         "certs.c4_desc": "مسارات علم بيانات متكاملة تغطي بايثون، نمذجة تعلم الآلة، تمثيل البيانات، واستعلامات SQL المتقدمة على مجموعات بيانات واقعية.",
-        "certs.c4_issuer": `<i class="fas fa-database"></i> IBM via Coursera`,
+        "certs.c4_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-database"></use></svg> IBM via Coursera`,
         "certs.c5_title": "مقدمة قواعد البيانات باستخدام SQL (CS50)",
         "certs.c5_desc": "تصميم قواعد البيانات العلائقية، التطبيع (Normalization)، تحسين الاستعلامات، الفهرسة، والعمليات التبادلية باستخدام SQLite وPostgreSQL.",
-        "certs.c5_issuer": `<i class="fas fa-server"></i> Harvard University`,
+        "certs.c5_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> Harvard University`,
         "certs.c6_title": "الرياضيات لتعلم الآلة (Mathematics for ML)",
         "certs.c6_desc": "الجبر الخطي، التفاضل والتكامل متعدد المتغيرات، وأسس تحليل المكونات الرئيسية (PCA) التي تقوم عليها خوارزميات التعلم العميق الحديثة.",
-        "certs.c6_issuer": `<i class="fas fa-calculator"></i> Imperial College`,
+        "certs.c6_issuer": `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calculator"></use></svg> Imperial College`,
         "contact.title": "تواصل معي",
         "contact.email_label": "البريد الإلكتروني",
         "contact.linkedin_label": "لينكد إن",
@@ -346,10 +348,10 @@ function initLanguageManager() {
 
         // Update Floating Language Switcher Button Display
         if (langToggleBtn) {
-            const icon = isAr ? 'fas fa-globe' : 'fas fa-language';
+            const icon = isAr ? 'globe' : 'language';
             const label = isAr ? 'EN' : 'عربي';
             const title = isAr ? 'Switch Language to English' : 'تغيير اللغة إلى العربية';
-            langToggleBtn.innerHTML = `<i class="${icon}"></i> <span class="lang-toggle-text">${label}</span>`;
+            langToggleBtn.innerHTML = `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-${icon}"></use></svg> <span class="lang-toggle-text">${label}</span>`;
             langToggleBtn.setAttribute('title', title);
             langToggleBtn.setAttribute('aria-label', title);
         }
@@ -380,8 +382,8 @@ function updateCollapsibleButtonsState(lang) {
         const label = isOpen 
             ? (isAr ? 'عرض مشاريع أقل' : 'Show Less Projects')
             : (isAr ? 'عرض المزيد من المشاريع' : 'Show More Projects');
-        const icon = isOpen ? 'fa-chevron-up' : 'fa-chevron-down';
-        projectsBtn.innerHTML = `<i class="fas ${icon}"></i> <span>${label}</span>`;
+        const iconName = isOpen ? 'chevron-up' : 'chevron-down';
+        projectsBtn.innerHTML = `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-${iconName}"></use></svg> <span>${label}</span>`;
     }
 
     // Certs button
@@ -392,8 +394,8 @@ function updateCollapsibleButtonsState(lang) {
         const label = isOpen 
             ? (isAr ? 'عرض شهادات أقل' : 'Show Less Certifications')
             : (isAr ? 'عرض المزيد من الشهادات' : 'Show More Certifications');
-        const icon = isOpen ? 'fa-chevron-up' : 'fa-chevron-down';
-        certsBtn.innerHTML = `<i class="fas ${icon}"></i> <span>${label}</span>`;
+        const iconName = isOpen ? 'chevron-up' : 'chevron-down';
+        certsBtn.innerHTML = `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-${iconName}"></use></svg> <span>${label}</span>`;
     }
 }
 
@@ -524,10 +526,10 @@ function initCollapsibleSections() {
 
         if (isHidden) {
             hiddenEl.style.display = (hiddenId === 'projects-hidden') ? 'flex' : 'grid';
-            btn.innerHTML = `<i class="fas fa-chevron-up"></i> <span>${dynamicLess}</span>`;
+            btn.innerHTML = `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-up"></use></svg> <span>${dynamicLess}</span>`;
         } else {
             hiddenEl.style.display = 'none';
-            btn.innerHTML = `<i class="fas fa-chevron-down"></i> <span>${dynamicMore}</span>`;
+            btn.innerHTML = `<svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-down"></use></svg> <span>${dynamicMore}</span>`;
         }
     };
 }

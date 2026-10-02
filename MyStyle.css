@@ -103,6 +103,16 @@ code, .fira-text, .telemetry-tag, .metric-badge {
     font-family: 'Fira Code', monospace;
 }
 
+/* Scalable Vector Icons */
+.svg-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 /* ==========================================================================
    1. COVER PAGE (HEADER)
    ========================================================================== */
@@ -238,9 +248,10 @@ header.hero-cover::before {
 .profile-text h1 {
     font-size: 3.2rem;
     margin-bottom: 0.6rem;
-    background: linear-gradient(135deg, #ffffff 40%, var(--theme-primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    background: none;
+    -webkit-text-fill-color: #ffffff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .profile-headline {

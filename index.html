@@ -13,11 +13,7 @@
 
     <!-- Local Self-Hosted Optimized Fonts (Alexandria, Fira Code, Inter, Outfit with font-display: swap) -->
     <link rel="stylesheet" href="assets/fonts/fonts.css">
-
-    <!-- Local Optimized Font Awesome (with font-display: swap) -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome.min.css">
-
-    <!-- Main Stylesheet -->
+<!-- Main Stylesheet -->
     <link rel="preload" href="MyStyle.css" as="style">
     <link rel="stylesheet" href="MyStyle.css">
 </head>
@@ -37,10 +33,10 @@
                     </p>
                     <div class="header-cta-group">
                         <a href="Youssef_Naggar_Resume.pdf" download class="btn-primary">
-                            <i class="fas fa-file-arrow-down"></i> <span data-i18n="hero.btn_resume">Download Resume</span>
+                            <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-file-arrow-down"></use></svg> <span data-i18n="hero.btn_resume">Download Resume</span>
                         </a>
                         <a href="#contact" class="btn-secondary">
-                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Contact Me</span>
+                            <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-paper-plane"></use></svg> <span data-i18n="hero.btn_contact">Contact Me</span>
                         </a>
                     </div>
                 </div>
@@ -51,13 +47,13 @@
     <!-- Navigation -->
     <nav class="main-nav" aria-label="Main Navigation">
         <ul>
-            <li><a href="#about"><i class="fas fa-user"></i> <span data-i18n="nav.about">About</span></a></li>
-            <li><a href="#experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Experience</span></a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span data-i18n="nav.education">Education</span></a></li>
-            <li><a href="#skills"><i class="fas fa-code"></i> <span data-i18n="nav.skills">Skills</span></a></li>
-            <li><a href="#projects"><i class="fas fa-diagram-project"></i> <span data-i18n="nav.projects">Projects</span></a></li>
-            <li><a href="#certificate"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificate</span></a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
+            <li><a href="#about"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-user"></use></svg> <span data-i18n="nav.about">About</span></a></li>
+            <li><a href="#experience"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-briefcase"></use></svg> <span data-i18n="nav.experience">Experience</span></a></li>
+            <li><a href="#education"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-graduation-cap"></use></svg> <span data-i18n="nav.education">Education</span></a></li>
+            <li><a href="#skills"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-code"></use></svg> <span data-i18n="nav.skills">Skills</span></a></li>
+            <li><a href="#projects"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-diagram-project"></use></svg> <span data-i18n="nav.projects">Projects</span></a></li>
+            <li><a href="#certificate"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-certificate"></use></svg> <span data-i18n="nav.certificates">Certificate</span></a></li>
+            <li><a href="#contact"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-envelope"></use></svg> <span data-i18n="nav.contact">Contact</span></a></li>
         </ul>
     </nav>
 
@@ -65,7 +61,7 @@
 
         <!-- 2. ABOUT ME -->
         <section id="about">
-            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> <span data-i18n="about.title">About Me</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-user-astronaut"></use></svg> <span data-i18n="about.title">About Me</span></h2>
             
             <div class="card">
                 <p class="about-bio" data-i18n="about.bio1">
@@ -77,11 +73,11 @@
 
                 <div class="language-list">
                     <div class="language-item" data-i18n-html="about.lang_en">
-                        <i class="fas fa-globe" style="color: var(--theme-primary);"></i>
+                        <svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-globe"></use></svg>
                         <span><strong>English:</strong> B2 Professional</span>
                     </div>
                     <div class="language-item" data-i18n-html="about.lang_ar">
-                        <i class="fas fa-language" style="color: var(--theme-primary);"></i>
+                        <svg class="svg-icon" style="color: var(--theme-primary);"><use href="assets/icons/icons.svg#icon-language"></use></svg>
                         <span><strong>Arabic:</strong> Native</span>
                     </div>
                 </div>
@@ -90,7 +86,7 @@
 
         <!-- 3. EXPERIENCE -->
         <section id="experience">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> <span data-i18n="experience.title">Enterprise Experience & Internships</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-briefcase"></use></svg> <span data-i18n="experience.title">Enterprise Experience & Internships</span></h2>
 
             <div class="experience-log-table">
                 <!-- DEPI -->
@@ -150,7 +146,7 @@
 
         <!-- 4. EDUCATION -->
         <section id="education">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span data-i18n="education.title">Education</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-graduation-cap"></use></svg> <span data-i18n="education.title">Education</span></h2>
 
             <div class="card education-card">
                 <div class="education-header">
@@ -159,24 +155,24 @@
                         <div class="education-school" data-i18n="education.school">Faculty of Computers and Artificial Intelligence, Cairo University</div>
                     </div>
                     <span class="metric-badge" data-i18n-html="education.badge_year">
-                        <i class="fas fa-calendar-check"></i> Expected 2027 (Currently 4th Year)
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calendar-check"></use></svg> Expected 2027 (Currently 4th Year)
                     </span>
                 </div>
                 <div class="education-metrics">
-                    <span class="metric-badge" data-i18n-html="education.badge_gpa"><i class="fas fa-bolt"></i> GPA: 3.58 / 4.0 - Excellent</span>
-                    <span class="metric-badge" data-i18n-html="education.badge_rank"><i class="fas fa-award"></i> Ranked Top 10 in Cohort</span>
-                    <span class="metric-badge" data-i18n-html="education.badge_major"><i class="fas fa-microchip"></i> AI Major</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_gpa"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-bolt"></use></svg> GPA: 3.58 / 4.0 - Excellent</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_rank"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-award"></use></svg> Ranked Top 10 in Cohort</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_major"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> AI Major</span>
                 </div>
             </div>
         </section>
 
         <!-- 5. SKILLS -->
         <section id="skills">
-            <h2 class="section-title"><i class="fas fa-code"></i> <span data-i18n="skills.title">Skills Matrix</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-code"></use></svg> <span data-i18n="skills.title">Skills Matrix</span></h2>
 
             <div class="skills-matrix">
                 <div class="skill-panel">
-                    <h3 data-i18n-html="skills.lang_title"><i class="fas fa-terminal"></i> Programming Languages</h3>
+                    <h3 data-i18n-html="skills.lang_title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-terminal"></use></svg> Programming Languages</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">Python</span>
                         <span class="tech-chip">C++</span>
@@ -186,7 +182,7 @@
                 </div>
 
                 <div class="skill-panel">
-                    <h3 data-i18n-html="skills.ml_title"><i class="fas fa-brain"></i> ML / AI & Libraries</h3>
+                    <h3 data-i18n-html="skills.ml_title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-brain"></use></svg> ML / AI & Libraries</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">PyTorch</span>
                         <span class="tech-chip">Scikit-learn</span>
@@ -202,7 +198,7 @@
                 </div>
 
                 <div class="skill-panel">
-                    <h3 data-i18n-html="skills.tools_title"><i class="fas fa-server"></i> Tools & Infrastructure</h3>
+                    <h3 data-i18n-html="skills.tools_title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> Tools & Infrastructure</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">Docker</span>
                         <span class="tech-chip">Git</span>
@@ -218,7 +214,7 @@
 
         <!-- 6. PROJECTS -->
         <section id="projects">
-            <h2 class="section-title"><i class="fas fa-diagram-project"></i> <span data-i18n="projects.title">Featured Projects</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-diagram-project"></use></svg> <span data-i18n="projects.title">Featured Projects</span></h2>
 
             <div class="projects-stack">
 
@@ -262,7 +258,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank">
-                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                            <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -305,7 +301,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank">
-                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                            <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -346,7 +342,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank">
-                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                            <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -390,7 +386,7 @@
 
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank">
-                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -454,7 +450,7 @@
 
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank">
-                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -489,7 +485,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank">
-                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -526,7 +522,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank">
-                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
+                                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -536,7 +532,7 @@
                 <!-- Projects Toggle Button -->
                 <div class="read-more-wrapper">
                     <button class="read-more-btn" id="projects-toggle-btn" onclick="toggleSection('projects-hidden', 'projects-toggle-btn', 'Show More Projects', 'Show Less Projects')">
-                        <i class="fas fa-chevron-down"></i> <span data-i18n="projects.btn_more">Show More Projects</span>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-down"></use></svg> <span data-i18n="projects.btn_more">Show More Projects</span>
                     </button>
                 </div>
 
@@ -545,20 +541,20 @@
 
         <!-- 7. CERTIFICATE -->
         <section id="certificate">
-            <h2 class="section-title"><i class="fas fa-certificate"></i> <span data-i18n="certs.title">Verified Certifications</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-certificate"></use></svg> <span data-i18n="certs.title">Verified Certifications</span></h2>
 
             <div class="certs-grid">
                 <!-- Cert 1 -->
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="0" title="Click to view certificate">
                         <img src="assets/certificate images/Advanced MCP.webp" alt="Anthropic MCP Advanced Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c1_title">MCP Advanced Topics</h3>
                         <p data-i18n="certs.c1_desc">Advanced architectures for building and deploying MCP servers, connecting LLMs with external tools and agentic tool pipelines.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c1_issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c1_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy</span>
                             <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -568,13 +564,13 @@
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="1" title="Click to view certificate">
                         <img src="assets/certificate images/Intro to MCP.webp" alt="Anthropic Intro to MCP Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c2_title">Introduction to MCP</h3>
                         <p data-i18n="certs.c2_desc">Building MCP servers to connect LLMs with custom external tools, database systems, and agentic workflows.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c2_issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c2_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-cube"></use></svg> Anthropic Academy</span>
                             <a href="https://verify.skilljar.com/c/kz9dt6omu9a4" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -584,13 +580,13 @@
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="2" title="Click to view certificate">
                         <img src="assets/certificate images/nvidia RAG.webp" alt="NVIDIA RAG Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c3_title">Building RAG Agents with LLMs</h3>
                         <p data-i18n="certs.c3_desc">Designing scalable Retrieval-Augmented Generation pipelines using vector embeddings, LangChain, and high-throughput LLMs.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c3_issuer"><i class="fas fa-microchip"></i> NVIDIA DLI</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c3_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-microchip"></use></svg> NVIDIA DLI</span>
                             <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -603,13 +599,13 @@
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="3" title="Click to view certificate">
                         <img src="assets/certificate images/IBM Data Science.webp" alt="IBM Data Science Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c4_title">IBM Data Science Professional</h3>
                         <p data-i18n="certs.c4_desc">End-to-end data science workflows covering Python, machine learning modeling, data visualization, and SQL on real datasets.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c4_issuer"><i class="fas fa-database"></i> IBM via Coursera</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c4_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-database"></use></svg> IBM via Coursera</span>
                             <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -619,13 +615,13 @@
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="4" title="Click to view certificate">
                         <img src="assets/certificate images/CS50 SQL.webp" alt="Harvard CS50 SQL Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c5_title">CS50's Intro to Databases with SQL</h3>
                         <p data-i18n="certs.c5_desc">Relational database design, schema normalization, query optimization, indexing, and transactions with SQLite and PostgreSQL.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c5_issuer"><i class="fas fa-server"></i> Harvard University</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c5_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-server"></use></svg> Harvard University</span>
                             <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -635,13 +631,13 @@
                 <article class="cert-card">
                     <div class="cert-img-wrapper" data-cert-index="5" title="Click to view certificate">
                         <img src="assets/certificate images/Imperial Math.webp" alt="Imperial College Math Certificate" width="340" height="180" loading="lazy" decoding="async">
-                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
+                        <div class="cert-zoom-hint"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-magnifying-glass-plus"></use></svg></div>
                     </div>
                     <div class="cert-body">
                         <h3 data-i18n="certs.c6_title">Mathematics for Machine Learning</h3>
                         <p data-i18n="certs.c6_desc">Linear algebra, multivariate calculus, and PCA foundations underpinning modern deep learning algorithms.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer" data-i18n-html="certs.c6_issuer"><i class="fas fa-calculator"></i> Imperial College</span>
+                            <span class="cert-issuer" data-i18n-html="certs.c6_issuer"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-calculator"></use></svg> Imperial College</span>
                             <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
@@ -651,69 +647,69 @@
             <!-- Certs Toggle Button -->
             <div class="read-more-wrapper">
                 <button class="read-more-btn" id="certs-toggle-btn" onclick="toggleSection('certs-hidden', 'certs-toggle-btn', 'Show More Certifications', 'Show Less Certifications')">
-                    <i class="fas fa-chevron-down"></i> <span data-i18n="certs.btn_more">Show More Certifications</span>
+                    <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-down"></use></svg> <span data-i18n="certs.btn_more">Show More Certifications</span>
                 </button>
             </div>
         </section>
 
         <!-- 8. CONTACT ME -->
         <section id="contact">
-            <h2 class="section-title"><i class="fas fa-paper-plane"></i> <span data-i18n="contact.title">Contact Me</span></h2>
+            <h2 class="section-title"><svg class="svg-icon"><use href="assets/icons/icons.svg#icon-paper-plane"></use></svg> <span data-i18n="contact.title">Contact Me</span></h2>
 
             <div class="contact-grid">
                 <!-- Email Card -->
                 <a href="mailto:youssef.naggar.pro@gmail.com" class="contact-card" aria-label="Send Email">
                     <div class="contact-card-icon">
-                        <i class="fas fa-envelope"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-envelope"></use></svg>
                     </div>
                     <div class="contact-card-content">
                         <span class="contact-card-label" data-i18n="contact.email_label">Email</span>
                         <span class="contact-card-value">youssef.naggar.pro@gmail.com</span>
                     </div>
                     <div class="contact-card-arrow">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-arrow-up-right-from-square"></use></svg>
                     </div>
                 </a>
 
                 <!-- LinkedIn Card -->
                 <a href="https://www.linkedin.com/in/youssef-naggar/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn Profile">
                     <div class="contact-card-icon">
-                        <i class="fab fa-linkedin-in"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-linkedin-in"></use></svg>
                     </div>
                     <div class="contact-card-content">
                         <span class="contact-card-label" data-i18n="contact.linkedin_label">LinkedIn</span>
                         <span class="contact-card-value">linkedin.com/in/youssef-naggar</span>
                     </div>
                     <div class="contact-card-arrow">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-arrow-up-right-from-square"></use></svg>
                     </div>
                 </a>
 
                 <!-- GitHub Card -->
                 <a href="https://github.com/Youssef-Naggar" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="GitHub Profile">
                     <div class="contact-card-icon">
-                        <i class="fab fa-github"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-github"></use></svg>
                     </div>
                     <div class="contact-card-content">
                         <span class="contact-card-label" data-i18n="contact.github_label">GitHub</span>
                         <span class="contact-card-value">github.com/Youssef-Naggar</span>
                     </div>
                     <div class="contact-card-arrow">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-arrow-up-right-from-square"></use></svg>
                     </div>
                 </a>
 
                 <!-- Location Card -->
                 <div class="contact-card location-card" aria-label="Location">
                     <div class="contact-card-icon">
-                        <i class="fas fa-location-dot"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-location-dot"></use></svg>
                     </div>
                     <div class="contact-card-content">
                         <span class="contact-card-label" data-i18n="contact.location_label">Location</span>
                         <span class="contact-card-value" data-i18n="contact.location_val">Cairo, Egypt</span>
                     </div>
                     <div class="contact-card-arrow">
-                        <i class="fas fa-earth-africa"></i>
+                        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-earth-africa"></use></svg>
                     </div>
                 </div>
             </div>
@@ -728,11 +724,11 @@
         <div class="lightbox-container">
             <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close Gallery">&times;</button>
             <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrev" aria-label="Previous Image">
-                <i class="fas fa-chevron-left"></i>
+                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-left"></use></svg>
             </button>
             <img src="" alt="Enlarged Preview" class="lightbox-image" id="lightboxImg">
             <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNext" aria-label="Next Image">
-                <i class="fas fa-chevron-right"></i>
+                <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-chevron-right"></use></svg>
             </button>
             <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
         </div>
@@ -740,13 +736,13 @@
 
     <!-- Floating Language Toggle Button -->
     <button class="lang-toggle" id="lang-toggle" aria-label="Switch Language" title="تغيير اللغة إلى العربية">
-        <i class="fas fa-language"></i>
+        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-language"></use></svg>
         <span class="lang-toggle-text">عربي</span>
     </button>
 
     <!-- Floating Theme Toggle Button -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light and Dark Mode">
-        <i class="fas fa-sun"></i>
+        <svg class="svg-icon"><use href="assets/icons/icons.svg#icon-sun"></use></svg>
     </button>
 
     <!-- Scripts -->
