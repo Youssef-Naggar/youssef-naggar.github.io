@@ -17,11 +17,11 @@
     <link rel="preload" href="MyStyle.css" as="style">
     <link rel="stylesheet" href="MyStyle.css">
 
-    <!-- Non-render-blocking Google Fonts (Eliminates 750ms Mobile Render Blocking) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" media="print" onload="this.media='all'">
+    <!-- Non-render-blocking Google Fonts (Alexandria, Cairo, Fira Code, Inter, Outfit) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Cairo:wght@500;600;700&family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Cairo:wght@500;600;700&family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Cairo:wght@500;600;700&family=Fira+Code:wght@500;600&family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap">
     </noscript>
 
     <!-- Non-render-blocking Font Awesome Icons -->
@@ -40,16 +40,16 @@
                     <img src="assets/profile-photo.webp" alt="Youssef Naggar - AI Engineer" class="profile-image" id="profile-image" width="210" height="210" fetchpriority="high" decoding="sync">
                 </div>
                 <div class="profile-text">
-                    <h1>Youssef Naggar</h1>
-                    <p class="profile-headline">
+                    <h1 data-i18n="hero.name">Youssef Naggar</h1>
+                    <p class="profile-headline" data-i18n="hero.headline">
                         AI Engineer || Ex-NBE & CIB Intern || Excellent Grade AI Student @ FCAI Cairo University
                     </p>
                     <div class="header-cta-group">
                         <a href="Youssef_Naggar_Resume.pdf" download class="btn-primary">
-                            <i class="fas fa-file-arrow-down"></i> Download Resume
+                            <i class="fas fa-file-arrow-down"></i> <span data-i18n="hero.btn_resume">Download Resume</span>
                         </a>
                         <a href="#contact" class="btn-secondary">
-                            <i class="fas fa-paper-plane"></i> Contact Me
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Contact Me</span>
                         </a>
                     </div>
                 </div>
@@ -60,13 +60,13 @@
     <!-- Navigation -->
     <nav class="main-nav" aria-label="Main Navigation">
         <ul>
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#projects"><i class="fas fa-diagram-project"></i> Projects</a></li>
-            <li><a href="#certificate"><i class="fas fa-certificate"></i> Certificate</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> <span data-i18n="nav.about">About</span></a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> <span data-i18n="nav.experience">Experience</span></a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span data-i18n="nav.education">Education</span></a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> <span data-i18n="nav.skills">Skills</span></a></li>
+            <li><a href="#projects"><i class="fas fa-diagram-project"></i> <span data-i18n="nav.projects">Projects</span></a></li>
+            <li><a href="#certificate"><i class="fas fa-certificate"></i> <span data-i18n="nav.certificates">Certificate</span></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
         </ul>
     </nav>
 
@@ -74,22 +74,22 @@
 
         <!-- 2. ABOUT ME -->
         <section id="about">
-            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
+            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> <span data-i18n="about.title">About Me</span></h2>
             
             <div class="card">
-                <p class="about-bio">
+                <p class="about-bio" data-i18n="about.bio1">
                     I am a Senior AI student at Cairo University (Faculty of Computers and Artificial Intelligence) specializing in building scalable ML pipelines and production RAG systems. Experienced in corporate infrastructure through NBE and CIB internships, I am focused on moving generative AI and deep learning architectures to production.
                 </p>
-                <p class="about-bio" style="margin-top: 1.2rem;">
+                <p class="about-bio" style="margin-top: 1.2rem;" data-i18n="about.bio2">
                     I empower small businesses and entrepreneurs to scale by analyzing their data to build the exact automation or ML pipeline, translating corporate infrastructure experience into resilient business solutions that fit their needs.
                 </p>
 
                 <div class="language-list">
-                    <div class="language-item">
+                    <div class="language-item" data-i18n-html="about.lang_en">
                         <i class="fas fa-globe" style="color: var(--theme-primary);"></i>
                         <span><strong>English:</strong> B2 Professional</span>
                     </div>
-                    <div class="language-item">
+                    <div class="language-item" data-i18n-html="about.lang_ar">
                         <i class="fas fa-language" style="color: var(--theme-primary);"></i>
                         <span><strong>Arabic:</strong> Native</span>
                     </div>
@@ -99,59 +99,59 @@
 
         <!-- 3. EXPERIENCE -->
         <section id="experience">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> Enterprise Experience & Internships</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> <span data-i18n="experience.title">Enterprise Experience & Internships</span></h2>
 
             <div class="experience-log-table">
                 <!-- DEPI -->
                 <div class="experience-log-row">
                     <div class="exp-header">
-                        <span class="exp-role">Data Analyst Intern</span>
-                        <span class="exp-date">July 2026 - Present</span>
+                        <span class="exp-role" data-i18n="experience.depi_role">Data Analyst Intern</span>
+                        <span class="exp-date" data-i18n="experience.depi_date">July 2026 - Present</span>
                     </div>
-                    <div class="exp-org">Digital Egypt Pioneers Initiative (DEPI) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <div class="exp-org" data-i18n-html="experience.depi_org">Digital Egypt Pioneers Initiative (DEPI) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
                     <ul class="exp-bullet-list">
-                        <li>Extracting, cleaning, and preparing multi-source datasets to conduct descriptive analysis and deliver actionable business insights.</li>
-                        <li>Building interactive data visualization dashboards and reporting pipelines to empower executive decision-making.</li>
-                        <li>Applying modern data analytics frameworks, statistical techniques, and ETL processes aligned with industry demands.</li>
+                        <li data-i18n="experience.depi_b1">Extracting, cleaning, and preparing multi-source datasets to conduct descriptive analysis and deliver actionable business insights.</li>
+                        <li data-i18n="experience.depi_b2">Building interactive data visualization dashboards and reporting pipelines to empower executive decision-making.</li>
+                        <li data-i18n="experience.depi_b3">Applying modern data analytics frameworks, statistical techniques, and ETL processes aligned with industry demands.</li>
                     </ul>
                 </div>
 
                 <!-- NBE -->
                 <div class="experience-log-row">
                     <div class="exp-header">
-                        <span class="exp-role">IT Infrastructure intern</span>
-                        <span class="exp-date">July 2026</span>
+                        <span class="exp-role" data-i18n="experience.nbe_role">IT Infrastructure intern</span>
+                        <span class="exp-date" data-i18n="experience.nbe_date">July 2026</span>
                     </div>
-                    <div class="exp-org">National Bank of Egypt (NBE) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <div class="exp-org" data-i18n-html="experience.nbe_org">National Bank of Egypt (NBE) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
                     <ul class="exp-bullet-list">
-                        <li>Designed disaster recovery plans for critical data centers and core banking services.</li>
-                        <li>Contributed to the IT automation and disaster recovery sector to ensure the resilience of enterprise infrastructure.</li>
+                        <li data-i18n="experience.nbe_b1">Designed disaster recovery plans for critical data centers and core banking services.</li>
+                        <li data-i18n="experience.nbe_b2">Contributed to the IT automation and disaster recovery sector to ensure the resilience of enterprise infrastructure.</li>
                     </ul>
                 </div>
 
                 <!-- Elevvo -->
                 <div class="experience-log-row">
                     <div class="exp-header">
-                        <span class="exp-role">AI/ML Trainee</span>
-                        <span class="exp-date">September 2025</span>
+                        <span class="exp-role" data-i18n="experience.elevvo_role">AI/ML Trainee</span>
+                        <span class="exp-date" data-i18n="experience.elevvo_date">September 2025</span>
                     </div>
-                    <div class="exp-org">Elevvo Internship Program &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <div class="exp-org" data-i18n-html="experience.elevvo_org">Elevvo Internship Program &bull; <span class="exp-loc">Cairo, Egypt</span></div>
                     <ul class="exp-bullet-list">
-                        <li>Developed 5 end-to-end ML pipelines across regression, classification, and time-series forecasting tasks using Python, Scikit-learn, and XGBoost, delivering production-ready models with documented results</li>
-                        <li>Evaluated and compared diverse machine learning models to identify the optimal architecture for each regression, classification, and forecasting task</li>
+                        <li data-i18n="experience.elevvo_b1">Developed 5 end-to-end ML pipelines across regression, classification, and time-series forecasting tasks using Python, Scikit-learn, and XGBoost, delivering production-ready models with documented results</li>
+                        <li data-i18n="experience.elevvo_b2">Evaluated and compared diverse machine learning models to identify the optimal architecture for each regression, classification, and forecasting task</li>
                     </ul>
                 </div>
 
                 <!-- CIB -->
                 <div class="experience-log-row">
                     <div class="exp-header">
-                        <span class="exp-role">Summer Intern</span>
-                        <span class="exp-date">August 2025</span>
+                        <span class="exp-role" data-i18n="experience.cib_role">Summer Intern</span>
+                        <span class="exp-date" data-i18n="experience.cib_date">August 2025</span>
                     </div>
-                    <div class="exp-org">Commercial International Bank (CIB) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
+                    <div class="exp-org" data-i18n-html="experience.cib_org">Commercial International Bank (CIB) &bull; <span class="exp-loc">Cairo, Egypt</span></div>
                     <ul class="exp-bullet-list">
-                        <li>Completed CIB’s competitive “The Green Leap” program, analyzing ESG data and digital transformation frameworks across Egyptian corporate case studies</li>
-                        <li>Conducted quantitative research on corporate governance and cybersecurity risk models, presenting findings to senior banking leaders</li>
+                        <li data-i18n="experience.cib_b1">Completed CIB’s competitive “The Green Leap” program, analyzing ESG data and digital transformation frameworks across Egyptian corporate case studies</li>
+                        <li data-i18n="experience.cib_b2">Conducted quantitative research on corporate governance and cybersecurity risk models, presenting findings to senior banking leaders</li>
                     </ul>
                 </div>
             </div>
@@ -159,33 +159,33 @@
 
         <!-- 4. EDUCATION -->
         <section id="education">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span data-i18n="education.title">Education</span></h2>
 
             <div class="card education-card">
                 <div class="education-header">
                     <div>
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <div class="education-school">Faculty of Computers and Artificial Intelligence, Cairo University</div>
+                        <h3 data-i18n="education.degree">Bachelor of Science in Computer Science</h3>
+                        <div class="education-school" data-i18n="education.school">Faculty of Computers and Artificial Intelligence, Cairo University</div>
                     </div>
-                    <span class="metric-badge">
+                    <span class="metric-badge" data-i18n-html="education.badge_year">
                         <i class="fas fa-calendar-check"></i> Expected 2027 (Currently 4th Year)
                     </span>
                 </div>
                 <div class="education-metrics">
-                    <span class="metric-badge"><i class="fas fa-bolt"></i> GPA: 3.58 / 4.0 - Excellent</span>
-                    <span class="metric-badge"><i class="fas fa-award"></i> Ranked Top 10 in Cohort</span>
-                    <span class="metric-badge"><i class="fas fa-microchip"></i> AI Major</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_gpa"><i class="fas fa-bolt"></i> GPA: 3.58 / 4.0 - Excellent</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_rank"><i class="fas fa-award"></i> Ranked Top 10 in Cohort</span>
+                    <span class="metric-badge" data-i18n-html="education.badge_major"><i class="fas fa-microchip"></i> AI Major</span>
                 </div>
             </div>
         </section>
 
         <!-- 5. SKILLS -->
         <section id="skills">
-            <h2 class="section-title"><i class="fas fa-code"></i> Skills Matrix</h2>
+            <h2 class="section-title"><i class="fas fa-code"></i> <span data-i18n="skills.title">Skills Matrix</span></h2>
 
             <div class="skills-matrix">
                 <div class="skill-panel">
-                    <h3><i class="fas fa-terminal"></i> Programming Languages</h3>
+                    <h3 data-i18n-html="skills.lang_title"><i class="fas fa-terminal"></i> Programming Languages</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">Python</span>
                         <span class="tech-chip">C++</span>
@@ -195,7 +195,7 @@
                 </div>
 
                 <div class="skill-panel">
-                    <h3><i class="fas fa-brain"></i> ML / AI & Libraries</h3>
+                    <h3 data-i18n-html="skills.ml_title"><i class="fas fa-brain"></i> ML / AI & Libraries</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">PyTorch</span>
                         <span class="tech-chip">Scikit-learn</span>
@@ -211,7 +211,7 @@
                 </div>
 
                 <div class="skill-panel">
-                    <h3><i class="fas fa-server"></i> Tools & Infrastructure</h3>
+                    <h3 data-i18n-html="skills.tools_title"><i class="fas fa-server"></i> Tools & Infrastructure</h3>
                     <div class="skill-chips">
                         <span class="tech-chip">Docker</span>
                         <span class="tech-chip">Git</span>
@@ -227,7 +227,7 @@
 
         <!-- 6. PROJECTS -->
         <section id="projects">
-            <h2 class="section-title"><i class="fas fa-diagram-project"></i> Featured Projects</h2>
+            <h2 class="section-title"><i class="fas fa-diagram-project"></i> <span data-i18n="projects.title">Featured Projects</span></h2>
 
             <div class="projects-stack">
 
@@ -236,26 +236,26 @@
                     <div class="project-card-header">
                         <div>
                             <h3 class="project-title">
-                                <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank">
+                                <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank" data-i18n="projects.p1_title">
                                     Email Fraud Detection Pipeline
                                 </a>
                             </h3>
-                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Tri-Stream Stacking Ensemble + Deep Autoencoder</span>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p1_subtitle">Tri-Stream Stacking Ensemble + Deep Autoencoder</span>
                         </div>
-                        <span class="project-badge">F2: 0.8842 | 90.5% Recall | ROC-AUC: 0.999</span>
+                        <span class="project-badge" data-i18n="projects.p1_badge">F2: 0.8842 | 90.5% Recall | ROC-AUC: 0.999</span>
                     </div>
 
-                    <p class="project-desc">
+                    <p class="project-desc" data-i18n="projects.p1_desc">
                         An end-to-end fraud classification architecture built on 447K Enron emails to resolve an extreme 192:1 class imbalance. Incorporates a custom PyTorch Deep Autoencoder to compress 384-dimensional MiniLM embeddings into 64-dimensional latents and derive unsupervised anomaly reconstruction error signals, stacked with a Tri-Stream Level-1 GBDT ensemble and an ElasticNet meta-learner.
                     </p>
 
                     <div class="specs-box">
-                        <h4>System Specifications:</h4>
+                        <h4 data-i18n="projects.specs_title">System Specifications:</h4>
                         <ul>
-                            <li>PyTorch Autoencoder: 384-d MiniLM compressed into 64-d latents + unsupervised anomaly MSE reconstruction signal.</li>
-                            <li>Tri-Stream Level-1 Models: Stream A (GPU XGBoost), Stream B (CatBoost with native text dictionaries), Stream C (LightGBM on TF-IDF n-grams).</li>
-                            <li>Level-2 Stacking Meta-Learner: ElasticNet meta-learner in logit space with 12 skip-connection domain features (VADER polarity, stylometry, sender velocity).</li>
-                            <li>Dynamic Threshold Tuning: tau* = 0.050 achieving 0.8842 F2-score, 90.5% recall, 80.8% precision, and 0.999 ROC-AUC.</li>
+                            <li data-i18n="projects.p1_s1">PyTorch Autoencoder: 384-d MiniLM compressed into 64-d latents + unsupervised anomaly MSE reconstruction signal.</li>
+                            <li data-i18n="projects.p1_s2">Tri-Stream Level-1 Models: Stream A (GPU XGBoost), Stream B (CatBoost with native text dictionaries), Stream C (LightGBM on TF-IDF n-grams).</li>
+                            <li data-i18n="projects.p1_s3">Level-2 Stacking Meta-Learner: ElasticNet meta-learner in logit space with 12 skip-connection domain features (VADER polarity, stylometry, sender velocity).</li>
+                            <li data-i18n="projects.p1_s4">Dynamic Threshold Tuning: tau* = 0.050 achieving 0.8842 F2-score, 90.5% recall, 80.8% precision, and 0.999 ROC-AUC.</li>
                         </ul>
                     </div>
 
@@ -271,7 +271,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Email-Fraud-Detector" target="_blank">
-                            <i class="fab fa-github"></i> View GitHub Repository
+                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -281,26 +281,26 @@
                     <div class="project-card-header">
                         <div>
                             <h3 class="project-title">
-                                <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank">
+                                <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank" data-i18n="projects.p2_title">
                                     Weather Wizard 3000
                                 </a>
                             </h3>
-                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorless RAG + LiteLLM Multi-Modal Engine</span>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p2_subtitle">Vectorless RAG + LiteLLM Multi-Modal Engine</span>
                         </div>
-                        <span class="project-badge">LiteLLM + Vectorless RAG</span>
+                        <span class="project-badge" data-i18n="projects.p2_badge">LiteLLM + Vectorless RAG</span>
                     </div>
 
-                    <p class="project-desc">
+                    <p class="project-desc" data-i18n="projects.p2_desc">
                         A personalized AI outfit recommendation assistant leveraging Vectorless RAG and LiteLLM for SDK-agnostic model routing. Synthesizes 5-day real-time OpenWeatherMap forecasts with structured multimodal closet inventories and user preferences to generate grounded, weather-appropriate wardrobe suggestions with virtual avatar rendering.
                     </p>
 
                     <div class="specs-box">
-                        <h4>System Specifications:</h4>
+                        <h4 data-i18n="projects.specs_title">System Specifications:</h4>
                         <ul>
-                            <li>Multimodal Closet Synthesizer: Processes clothing photos via Vision LLM into structured metadata stored in closet.json.</li>
-                            <li>Grounded LLM Weather Wizard: Filters real-time weather forecasts and dynamically matches seasonal attributes with available wardrobe items.</li>
-                            <li>Virtual Avatar Drawer: Generates personalized visual demo previews combining user avatar and recommended outfit items.</li>
-                            <li>Employs LiteLLM for seamless SDK-agnostic model switching and automated IP/GPS geolocation detection.</li>
+                            <li data-i18n="projects.p2_s1">Multimodal Closet Synthesizer: Processes clothing photos via Vision LLM into structured metadata stored in closet.json.</li>
+                            <li data-i18n="projects.p2_s2">Grounded LLM Weather Wizard: Filters real-time weather forecasts and dynamically matches seasonal attributes with available wardrobe items.</li>
+                            <li data-i18n="projects.p2_s3">Virtual Avatar Drawer: Generates personalized visual demo previews combining user avatar and recommended outfit items.</li>
+                            <li data-i18n="projects.p2_s4">Employs LiteLLM for seamless SDK-agnostic model switching and automated IP/GPS geolocation detection.</li>
                         </ul>
                     </div>
 
@@ -314,7 +314,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Weather-Wizard-3000" target="_blank">
-                            <i class="fab fa-github"></i> View GitHub Repository
+                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -324,25 +324,25 @@
                     <div class="project-card-header">
                         <div>
                             <h3 class="project-title">
-                                <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank">
+                                <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank" data-i18n="projects.p3_title">
                                     Dog Breed Classifier (ConvNeXt-V2)
                                 </a>
                             </h3>
-                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Computer Vision Fine-Tuning Pipeline</span>
+                            <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p3_subtitle">Computer Vision Fine-Tuning Pipeline</span>
                         </div>
-                        <span class="project-badge">90.5% Test Accuracy (120 Breeds)</span>
+                        <span class="project-badge" data-i18n="projects.p3_badge">90.5% Test Accuracy (120 Breeds)</span>
                     </div>
 
-                    <p class="project-desc">
+                    <p class="project-desc" data-i18n="projects.p3_desc">
                         A deep learning computer vision pipeline trained on the Stanford Dogs dataset across 120 breeds. Features automated bounding-box image preprocessing to isolate subjects, MixUp data augmentation for cross-class generalization, and fine-tuning of ConvNeXt-V2 in PyTorch with customized learning rate scheduling.
                     </p>
 
                     <div class="specs-box">
-                        <h4>System Specifications:</h4>
+                        <h4 data-i18n="projects.specs_title">System Specifications:</h4>
                         <ul>
-                            <li>Architecture: ConvNeXt-V2 with 7x7 depthwise convs, inverted bottleneck blocks, and Global Response Normalization (GRN).</li>
-                            <li>Preprocessing: Automated bounding-box image cropping to normalize training data and eliminate background noise.</li>
-                            <li>Generalization: MixUp augmentation and cosine annealing learning rate scheduler in PyTorch.</li>
+                            <li data-i18n="projects.p3_s1">Architecture: ConvNeXt-V2 with 7x7 depthwise convs, inverted bottleneck blocks, and Global Response Normalization (GRN).</li>
+                            <li data-i18n="projects.p3_s2">Preprocessing: Automated bounding-box image cropping to normalize training data and eliminate background noise.</li>
+                            <li data-i18n="projects.p3_s3">Generalization: MixUp augmentation and cosine annealing learning rate scheduler in PyTorch.</li>
                         </ul>
                     </div>
 
@@ -355,7 +355,7 @@
 
                     <div class="project-links">
                         <a href="https://github.com/Youssef-Naggar/Dog-Breed-classifier" target="_blank">
-                            <i class="fab fa-github"></i> View GitHub Repository
+                            <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                         </a>
                     </div>
                 </article>
@@ -368,25 +368,25 @@
                         <div class="project-card-header">
                             <div>
                                 <h3 class="project-title">
-                                    <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank">
+                                    <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank" data-i18n="projects.p4_title">
                                         MicroGrad - Custom Neural Network Engine
                                     </a>
                                 </h3>
-                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Vectorized Backpropagation Engine + GPU Acceleration</span>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p4_subtitle">Vectorized Backpropagation Engine + GPU Acceleration</span>
                             </div>
-                            <span class="project-badge">84% EMNIST Match (CuPy GPU)</span>
+                            <span class="project-badge" data-i18n="projects.p4_badge">84% EMNIST Match (CuPy GPU)</span>
                         </div>
 
-                        <p class="project-desc">
+                        <p class="project-desc" data-i18n="projects.p4_desc">
                             A ground-up implementation of a neural network engine in Python with vectorized backpropagation, Momentum SGD, and GPU acceleration via CuPy. Matches PyTorch benchmark performance (84% test accuracy on EMNIST) without relying on external deep learning frameworks.
                         </p>
 
                         <div class="specs-box">
-                            <h4>System Specifications:</h4>
+                            <h4 data-i18n="projects.specs_title">System Specifications:</h4>
                             <ul>
-                                <li>Forward & Backward Engine: Pure Python matrix calculus with vectorized derivatives for ReLU, Sigmoid, and Tanh.</li>
-                                <li>Optimization: Momentum SGD optimizer with He and Xavier weight initialization schemes.</li>
-                                <li>Hardware Acceleration: CuPy integration for high-throughput GPU matrix operations with automatic CPU fallback.</li>
+                                <li data-i18n="projects.p4_s1">Forward & Backward Engine: Pure Python matrix calculus with vectorized derivatives for ReLU, Sigmoid, and Tanh.</li>
+                                <li data-i18n="projects.p4_s2">Optimization: Momentum SGD optimizer with He and Xavier weight initialization schemes.</li>
+                                <li data-i18n="projects.p4_s3">Hardware Acceleration: CuPy integration for high-throughput GPU matrix operations with automatic CPU fallback.</li>
                             </ul>
                         </div>
 
@@ -399,7 +399,7 @@
 
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/NN-from-scratch" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
+                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -409,13 +409,13 @@
                         <div class="project-card-header">
                             <div>
                                 <h3 class="project-title">
-                                    <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank">
+                                    <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank" data-i18n="projects.p5_title">
                                         UltraTube - Asynchronous TUI Media Downloader
                                     </a>
                                 </h3>
-                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Textual Terminal UI + Pytest Suite</span>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p5_subtitle">Textual Terminal UI + Pytest Suite</span>
                             </div>
-                            <span class="project-badge">Textual TUI + AsyncIO</span>
+                            <span class="project-badge" data-i18n="projects.p5_badge">Textual TUI + AsyncIO</span>
                         </div>
 
                         <!-- Carousel Visual Container (Click image to open fullscreen gallery modal) -->
@@ -449,7 +449,7 @@
                             </div>
                         </div>
 
-                        <p class="project-desc">
+                        <p class="project-desc" data-i18n="projects.p5_desc">
                             A high-performance, multi-tab asynchronous Terminal User Interface (TUI) application built with Python's Textual framework and yt-dlp. Features parallel queue processing, live download progress bars, metadata processing (merging audio tracks, thumbnails, and dual subtitles), and comprehensive test coverage following Dependency Inversion.
                         </p>
 
@@ -463,7 +463,7 @@
 
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/UltraTube" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
+                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -473,21 +473,21 @@
                         <div class="project-card-header">
                             <div>
                                 <h3 class="project-title">
-                                    <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank">
+                                    <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank" data-i18n="projects.p6_title">
                                         Wordle Combination Finder
                                     </a>
                                 </h3>
-                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">Information Gain Optimization Algorithm</span>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p6_subtitle">Information Gain Optimization Algorithm</span>
                             </div>
-                            <span class="project-badge">+8% Heuristic Superiority</span>
+                            <span class="project-badge" data-i18n="projects.p6_badge">+8% Heuristic Superiority</span>
                         </div>
-                        <p class="project-desc">
+                        <p class="project-desc" data-i18n="projects.p6_desc">
                             An algorithmic search system identifying optimal 4-word starting combinations for Wordle using letter position frequency analysis, a custom Trie data structure, and parallel backtracking with multiprocessing.
                         </p>
                         <div class="specs-box">
-                            <h4>Key Finding:</h4>
+                            <h4 data-i18n="projects.finding_title">Key Finding:</h4>
                             <ul>
-                                <li>Optimal 4-word combination: <code>['HOWFS', 'IXTLE', 'JUMBY', 'KRANG']</code> with a score of 2659, outperforming commonly cited combinations by 8%.</li>
+                                <li data-i18n-html="projects.p6_s1">Optimal 4-word combination: <code>['HOWFS', 'IXTLE', 'JUMBY', 'KRANG']</code> with a score of 2659, outperforming commonly cited combinations by 8%.</li>
                             </ul>
                         </div>
                         <div class="tags-group">
@@ -498,7 +498,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/Wordle-Combination-Finder" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
+                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -508,13 +508,13 @@
                         <div class="project-card-header">
                             <div>
                                 <h3 class="project-title">
-                                    <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank">
+                                    <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank" data-i18n="projects.p7_title">
                                         Monster Wrangler Game
                                     </a>
                                 </h3>
-                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;">2D Arcade Game Engine</span>
+                                <span style="color: var(--theme-primary); font-size: 0.9rem; font-weight: 600;" data-i18n="projects.p7_subtitle">2D Arcade Game Engine</span>
                             </div>
-                            <span class="project-badge">Pygame OOP</span>
+                            <span class="project-badge" data-i18n="projects.p7_badge">Pygame OOP</span>
                         </div>
                         <!-- Carousel Visual Container (Same Layout as UltraTube) -->
                         <div class="ultratube-carousel monster-gallery">
@@ -525,7 +525,7 @@
                                 <img src="assets/Monster wrangler/Monster Wrangler image 2.webp" alt="Monster Wrangler Screenshot 2" width="280" height="180" loading="lazy" decoding="async">
                             </div>
                         </div>
-                        <p class="project-desc">
+                        <p class="project-desc" data-i18n="projects.p7_desc">
                             A fast-paced 2D arcade game built with Pygame featuring object-oriented game state management, sprite animation, dynamic collision handling, and progressive difficulty.
                         </p>
                         <div class="tags-group">
@@ -535,7 +535,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Youssef-Naggar/Monster-Wrangler-Game" target="_blank">
-                                <i class="fab fa-github"></i> View GitHub Repository
+                                <i class="fab fa-github"></i> <span data-i18n="projects.view_github">View GitHub Repository</span>
                             </a>
                         </div>
                     </article>
@@ -545,7 +545,7 @@
                 <!-- Projects Toggle Button -->
                 <div class="read-more-wrapper">
                     <button class="read-more-btn" id="projects-toggle-btn" onclick="toggleSection('projects-hidden', 'projects-toggle-btn', 'Show More Projects', 'Show Less Projects')">
-                        <i class="fas fa-chevron-down"></i> Show More Projects
+                        <i class="fas fa-chevron-down"></i> <span data-i18n="projects.btn_more">Show More Projects</span>
                     </button>
                 </div>
 
@@ -554,50 +554,53 @@
 
         <!-- 7. CERTIFICATE -->
         <section id="certificate">
-            <h2 class="section-title"><i class="fas fa-certificate"></i> Verified Certifications</h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> <span data-i18n="certs.title">Verified Certifications</span></h2>
 
             <div class="certs-grid">
                 <!-- Cert 1 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="0" title="Click to view certificate">
                         <img src="assets/certificate images/Advanced MCP.webp" alt="Anthropic MCP Advanced Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>MCP Advanced Topics</h3>
-                        <p>Advanced architectures for building and deploying MCP servers, connecting LLMs with external tools and agentic tool pipelines.</p>
+                        <h3 data-i18n="certs.c1_title">MCP Advanced Topics</h3>
+                        <p data-i18n="certs.c1_desc">Advanced architectures for building and deploying MCP servers, connecting LLMs with external tools and agentic tool pipelines.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
-                            <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c1_issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <a href="https://verify.skilljar.com/c/xbamz7squ4zb" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Cert 2 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="1" title="Click to view certificate">
                         <img src="assets/certificate images/Intro to MCP.webp" alt="Anthropic Intro to MCP Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>Introduction to MCP</h3>
-                        <p>Building MCP servers to connect LLMs with custom external tools, database systems, and agentic workflows.</p>
+                        <h3 data-i18n="certs.c2_title">Introduction to MCP</h3>
+                        <p data-i18n="certs.c2_desc">Building MCP servers to connect LLMs with custom external tools, database systems, and agentic workflows.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
-                            <a href="https://verify.skilljar.com/c/kz9dt6omu9a4" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c2_issuer"><i class="fas fa-cube"></i> Anthropic Academy</span>
+                            <a href="https://verify.skilljar.com/c/kz9dt6omu9a4" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Cert 3 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="2" title="Click to view certificate">
                         <img src="assets/certificate images/nvidia RAG.webp" alt="NVIDIA RAG Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>Building RAG Agents with LLMs</h3>
-                        <p>Designing scalable Retrieval-Augmented Generation pipelines using vector embeddings, LangChain, and high-throughput LLMs.</p>
+                        <h3 data-i18n="certs.c3_title">Building RAG Agents with LLMs</h3>
+                        <p data-i18n="certs.c3_desc">Designing scalable Retrieval-Augmented Generation pipelines using vector embeddings, LangChain, and high-throughput LLMs.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-microchip"></i> NVIDIA DLI</span>
-                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c3_issuer"><i class="fas fa-microchip"></i> NVIDIA DLI</span>
+                            <a href="https://learn.nvidia.com/certificates?id=uUYZb_nkR2ic3QtsdWMvng" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
@@ -607,45 +610,48 @@
             <div id="certs-hidden" style="display: none; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                 <!-- Cert 4 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="3" title="Click to view certificate">
                         <img src="assets/certificate images/IBM Data Science.webp" alt="IBM Data Science Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>IBM Data Science Professional</h3>
-                        <p>End-to-end data science workflows covering Python, machine learning modeling, data visualization, and SQL on real datasets.</p>
+                        <h3 data-i18n="certs.c4_title">IBM Data Science Professional</h3>
+                        <p data-i18n="certs.c4_desc">End-to-end data science workflows covering Python, machine learning modeling, data visualization, and SQL on real datasets.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-database"></i> IBM via Coursera</span>
-                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c4_issuer"><i class="fas fa-database"></i> IBM via Coursera</span>
+                            <a href="https://coursera.org/verify/professional-cert/A9WQXJZLW5BA" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Cert 5 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="4" title="Click to view certificate">
                         <img src="assets/certificate images/CS50 SQL.webp" alt="Harvard CS50 SQL Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>CS50's Intro to Databases with SQL</h3>
-                        <p>Relational database design, schema normalization, query optimization, indexing, and transactions with SQLite and PostgreSQL.</p>
+                        <h3 data-i18n="certs.c5_title">CS50's Intro to Databases with SQL</h3>
+                        <p data-i18n="certs.c5_desc">Relational database design, schema normalization, query optimization, indexing, and transactions with SQLite and PostgreSQL.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-server"></i> Harvard University</span>
-                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c5_issuer"><i class="fas fa-server"></i> Harvard University</span>
+                            <a href="https://cs50.harvard.edu/certificates/088b83d3-ccbb-4f18-96ed-41cf718db1a7" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Cert 6 -->
                 <article class="cert-card">
-                    <div class="cert-img-wrapper">
+                    <div class="cert-img-wrapper" data-cert-index="5" title="Click to view certificate">
                         <img src="assets/certificate images/Imperial Math.webp" alt="Imperial College Math Certificate" width="340" height="180" loading="lazy" decoding="async">
+                        <div class="cert-zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="cert-body">
-                        <h3>Mathematics for Machine Learning</h3>
-                        <p>Linear algebra, multivariate calculus, and PCA foundations underpinning modern deep learning algorithms.</p>
+                        <h3 data-i18n="certs.c6_title">Mathematics for Machine Learning</h3>
+                        <p data-i18n="certs.c6_desc">Linear algebra, multivariate calculus, and PCA foundations underpinning modern deep learning algorithms.</p>
                         <div class="cert-footer">
-                            <span class="cert-issuer"><i class="fas fa-calculator"></i> Imperial College</span>
-                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-link" target="_blank">Verify Credential</a>
+                            <span class="cert-issuer" data-i18n-html="certs.c6_issuer"><i class="fas fa-calculator"></i> Imperial College</span>
+                            <a href="https://coursera.org/verify/specialization/DJLQZ61WLEYC" class="cert-link" target="_blank" data-i18n="certs.verify">Verify Credential</a>
                         </div>
                     </div>
                 </article>
@@ -654,14 +660,14 @@
             <!-- Certs Toggle Button -->
             <div class="read-more-wrapper">
                 <button class="read-more-btn" id="certs-toggle-btn" onclick="toggleSection('certs-hidden', 'certs-toggle-btn', 'Show More Certifications', 'Show Less Certifications')">
-                    <i class="fas fa-chevron-down"></i> Show More Certifications
+                    <i class="fas fa-chevron-down"></i> <span data-i18n="certs.btn_more">Show More Certifications</span>
                 </button>
             </div>
         </section>
 
         <!-- 8. CONTACT ME -->
         <section id="contact">
-            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contact Me</h2>
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> <span data-i18n="contact.title">Contact Me</span></h2>
 
             <div class="contact-grid">
                 <!-- Email Card -->
@@ -670,7 +676,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-card-content">
-                        <span class="contact-card-label">Email</span>
+                        <span class="contact-card-label" data-i18n="contact.email_label">Email</span>
                         <span class="contact-card-value">youssef.naggar.pro@gmail.com</span>
                     </div>
                     <div class="contact-card-arrow">
@@ -684,7 +690,7 @@
                         <i class="fab fa-linkedin-in"></i>
                     </div>
                     <div class="contact-card-content">
-                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-label" data-i18n="contact.linkedin_label">LinkedIn</span>
                         <span class="contact-card-value">linkedin.com/in/youssef-naggar</span>
                     </div>
                     <div class="contact-card-arrow">
@@ -698,7 +704,7 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="contact-card-content">
-                        <span class="contact-card-label">GitHub</span>
+                        <span class="contact-card-label" data-i18n="contact.github_label">GitHub</span>
                         <span class="contact-card-value">github.com/Youssef-Naggar</span>
                     </div>
                     <div class="contact-card-arrow">
@@ -712,8 +718,8 @@
                         <i class="fas fa-location-dot"></i>
                     </div>
                     <div class="contact-card-content">
-                        <span class="contact-card-label">Location</span>
-                        <span class="contact-card-value">Cairo, Egypt</span>
+                        <span class="contact-card-label" data-i18n="contact.location_label">Location</span>
+                        <span class="contact-card-value" data-i18n="contact.location_val">Cairo, Egypt</span>
                     </div>
                     <div class="contact-card-arrow">
                         <i class="fas fa-earth-africa"></i>
@@ -724,6 +730,8 @@
 
     </div>
 
+
+
     <!-- Image Lightbox / Gallery Modal (Fullscreen Enlarged View + Prev/Next Controls) -->
     <div class="lightbox-modal" id="lightboxModal" aria-modal="true" role="dialog">
         <div class="lightbox-container">
@@ -731,7 +739,7 @@
             <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrev" aria-label="Previous Image">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <img src="" alt="Enlarged Project Preview" class="lightbox-image" id="lightboxImg">
+            <img src="" alt="Enlarged Preview" class="lightbox-image" id="lightboxImg">
             <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNext" aria-label="Next Image">
                 <i class="fas fa-chevron-right"></i>
             </button>
@@ -739,7 +747,11 @@
         </div>
     </div>
 
-
+    <!-- Floating Language Toggle Button -->
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch Language" title="تغيير اللغة إلى العربية">
+        <i class="fas fa-language"></i>
+        <span class="lang-toggle-text">عربي</span>
+    </button>
 
     <!-- Floating Theme Toggle Button -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light and Dark Mode">

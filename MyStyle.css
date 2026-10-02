@@ -1151,13 +1151,40 @@ section {
     opacity: 1;
 }
 
-footer {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    background: var(--bg-surface);
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-size: 0.9rem;
+
+
+/* Certificate Image Zoom Hint */
+.cert-img-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.cert-img-wrapper .cert-zoom-hint {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(10, 14, 23, 0.78);
+    border: 1px solid var(--border-color);
+    color: var(--theme-primary);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.25s ease;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.cert-card:hover .cert-img-wrapper .cert-zoom-hint {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 12px var(--theme-primary-glow);
 }
 
 /* Floating Theme Toggle Button */
@@ -1183,6 +1210,127 @@ footer {
 
 .theme-toggle:hover {
     transform: scale(1.1);
+}
+
+/* Floating Language Toggle Button */
+.lang-toggle {
+    position: fixed;
+    bottom: 82px;
+    right: 24px;
+    background: var(--bg-surface-elevated, #101626);
+    color: var(--text-main, #ffffff);
+    border: 1px solid var(--theme-primary, #00d2ff);
+    border-radius: 9999px;
+    padding: 0 14px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px var(--theme-primary-glow);
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.lang-toggle:hover {
+    transform: scale(1.06) translateY(-2px);
+    background: var(--theme-gradient);
+    color: #ffffff;
+    box-shadow: 0 8px 25px var(--theme-primary-glow);
+}
+
+.lang-toggle i {
+    font-size: 1.15rem;
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.lang-toggle:hover i {
+    color: #ffffff;
+}
+
+.lang-toggle-text {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   RTL (RIGHT-TO-LEFT) & ARABIC TYPOGRAPHY
+   ========================================================================== */
+html[dir="rtl"],
+html[dir="rtl"] body {
+    font-family: 'Alexandria', 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .profile-text,
+html[dir="rtl"] .about-bio,
+html[dir="rtl"] .card,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .exp-header,
+html[dir="rtl"] .exp-org,
+html[dir="rtl"] .project-card,
+html[dir="rtl"] .specs-box,
+html[dir="rtl"] .cert-body {
+    text-align: right;
+}
+
+html[dir="rtl"] .experience-log-row {
+    border-left: 1px solid var(--border-color);
+    border-right: 4px solid var(--theme-primary);
+}
+
+html[dir="rtl"] .experience-log-row:hover {
+    transform: translateX(-4px);
+    border-right-color: var(--theme-secondary);
+}
+
+html[dir="rtl"] .exp-bullet-list li {
+    padding-left: 0;
+    padding-right: 1.3rem;
+}
+
+html[dir="rtl"] .exp-bullet-list li::before {
+    left: auto;
+    right: 0.2rem;
+}
+
+html[dir="rtl"] .specs-box ul li {
+    padding-left: 0;
+    padding-right: 1.4rem;
+}
+
+html[dir="rtl"] .specs-box ul li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .contact-card-arrow {
+    transform: rotate(90deg);
+}
+
+html[dir="rtl"] .contact-card:hover:not(.location-card) .contact-card-arrow {
+    transform: rotate(90deg) translate(-2px, -2px);
+}
+
+html[dir="rtl"] .project-links {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .cert-footer {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cert-img-wrapper .cert-zoom-hint {
+    right: auto;
+    left: 12px;
 }
 
 /* Responsive */
