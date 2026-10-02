@@ -1025,6 +1025,7 @@ section {
     align-items: center;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color);
+    gap: 0.8rem;
 }
 
 .cert-issuer {
@@ -1034,6 +1035,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
 }
 
 .cert-link {
@@ -1041,12 +1043,17 @@ section {
     background: var(--badge-bg);
     border: 1px solid var(--badge-border);
     color: var(--theme-primary);
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1rem;
     border-radius: 6px;
     font-size: 0.78rem;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cert-link:hover {
@@ -1324,8 +1331,11 @@ html[dir="rtl"] .project-links {
     justify-content: flex-start;
 }
 
-html[dir="rtl"] .cert-footer {
-    flex-direction: row-reverse;
+html[dir="rtl"] .cert-issuer {
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 html[dir="rtl"] .cert-img-wrapper .cert-zoom-hint {
