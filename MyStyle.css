@@ -439,26 +439,81 @@ section {
 /* ==========================================================================
    3. ENTERPRISE EXPERIENCE & INTERNSHIPS (EDITORIAL TIMELINE)
    ========================================================================== */
-.experience-log-table {
+.experience-timeline {
+    position: relative;
+    padding-left: 3.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+}
+
+/* Luminous progression rail */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 26px;
+    bottom: 26px;
+    left: 1.6rem;
+    width: 3px;
+    background: linear-gradient(180deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+    border-radius: 999px;
+    opacity: 0.35;
+    box-shadow: 0 0 10px var(--theme-primary-glow);
+}
+
+.exp-timeline-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Interactive Timeline Logo Anchor Node */
+.exp-timeline-node {
+    position: absolute;
+    top: 1.2rem;
+    left: -3.5rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--bg-surface);
+    border: 2px solid var(--node-accent, var(--theme-primary));
+    box-shadow: 0 0 14px var(--node-glow, var(--theme-primary-glow));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px;
+    z-index: 2;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.exp-node-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.exp-timeline-item:hover .exp-timeline-node {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 0 24px var(--node-glow, var(--theme-primary-glow));
+    border-color: var(--node-accent, var(--theme-primary));
 }
 
 .experience-log-row {
     background: var(--bg-surface-elevated);
     border: 1px solid var(--border-color);
-    border-left: 4px solid var(--theme-primary);
-    border-radius: 12px;
+    border-left: 4px solid var(--node-accent, var(--theme-primary));
+    border-radius: 14px;
     padding: 1.6rem 1.8rem;
-    transition: all 0.25s ease;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.experience-log-row:hover {
-    transform: translateX(4px);
-    border-color: var(--theme-primary);
-    border-left-color: var(--theme-secondary);
-    box-shadow: var(--card-shadow);
+.exp-timeline-item:hover .experience-log-row {
+    transform: translateX(6px);
+    border-color: var(--node-accent, var(--theme-primary));
+    box-shadow: 0 12px 28px -6px var(--node-glow, var(--theme-primary-glow));
 }
 
 .exp-header {
@@ -1300,14 +1355,33 @@ html[dir="rtl"] .cert-body {
     text-align: right;
 }
 
-html[dir="rtl"] .experience-log-row {
-    border-left: 1px solid var(--border-color);
-    border-right: 4px solid var(--theme-primary);
+html[dir="rtl"] .experience-timeline {
+    padding-left: 0;
+    padding-right: 3.5rem;
 }
 
-html[dir="rtl"] .experience-log-row:hover {
-    transform: translateX(-4px);
-    border-right-color: var(--theme-secondary);
+html[dir="rtl"] .experience-timeline::before {
+    left: auto;
+    right: 1.6rem;
+}
+
+html[dir="rtl"] .exp-timeline-node {
+    left: auto;
+    right: -3.5rem;
+}
+
+html[dir="rtl"] .exp-timeline-item:hover .exp-timeline-node {
+    transform: scale(1.15) rotate(-2deg);
+}
+
+html[dir="rtl"] .experience-log-row {
+    border-left: 1px solid var(--border-color);
+    border-right: 4px solid var(--node-accent, var(--theme-primary));
+}
+
+html[dir="rtl"] .exp-timeline-item:hover .experience-log-row {
+    transform: translateX(-6px);
+    border-right-color: var(--node-accent, var(--theme-secondary));
 }
 
 html[dir="rtl"] .exp-bullet-list li {
@@ -1404,6 +1478,38 @@ html[dir="rtl"] .cert-img-wrapper .cert-zoom-hint {
     
     .container {
         padding: 2rem 1rem;
+    }
+
+    .experience-timeline {
+        padding-left: 2.8rem;
+    }
+
+    .experience-timeline::before {
+        left: 1.25rem;
+    }
+
+    .exp-timeline-node {
+        left: -2.8rem;
+        width: 44px;
+        height: 44px;
+        top: 1rem;
+    }
+
+    html[dir="rtl"] .experience-timeline {
+        padding-left: 0;
+        padding-right: 2.8rem;
+    }
+
+    html[dir="rtl"] .experience-timeline::before {
+        right: 1.25rem;
+    }
+
+    html[dir="rtl"] .exp-timeline-node {
+        right: -2.8rem;
+    }
+
+    .experience-log-row {
+        padding: 1.3rem 1.4rem;
     }
 
     .contact-grid {

@@ -1,5 +1,7 @@
 # Markdown documentation & audit files
 *.md
+!optimize-landingpage-skill.md
+!.agents/**
 
 # Prototypes, draft files and alternative version experiments
 version-*.html
