@@ -1330,12 +1330,12 @@ html[dir="rtl"] .specs-box ul li::before {
     right: 0;
 }
 
-html[dir="rtl"] .contact-card-arrow {
-    transform: rotate(90deg);
+html[dir="rtl"] .contact-card:not(.location-card) .contact-card-arrow {
+    transform: scaleX(-1);
 }
 
 html[dir="rtl"] .contact-card:hover:not(.location-card) .contact-card-arrow {
-    transform: rotate(90deg) translate(-2px, -2px);
+    transform: scaleX(-1) translate(2px, -2px);
 }
 
 html[dir="rtl"] .project-links {
