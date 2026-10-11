@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothNavigation();
     initCollapsibleSections();
     initLightboxManager();
+    initIdleImagePrefetch();
 });
 
 /* ==========================================================================
@@ -525,6 +526,9 @@ function initCollapsibleSections() {
         }
 
         if (isHidden) {
+            if (typeof window.prefetchHiddenContainer === 'function') {
+                window.prefetchHiddenContainer(hiddenId);
+            }
             hiddenEl.style.display = (hiddenId === 'projects-hidden') ? 'flex' : 'grid';
             btn.innerHTML = `<svg class="svg-icon"><use href="#icon-chevron-up"></use></svg> <span>${dynamicLess}</span>`;
         } else {
@@ -608,4 +612,116 @@ function initSmoothNavigation() {
             }
         });
     });
+}
+
+/* ==========================================================================
+   SPECULATIVE IDLE PREFETCH FOR HIDDEN ASSETS (PROJECTS & CERTIFICATIONS)
+   ========================================================================== */
+function initIdleImagePrefetch() {
+    // 1. Data-Saver & Network condition guards
+    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (conn) {
+        if (conn.saveData) {
+            // Respect user data saver mode; skip prefetching
+            return;
+        }
+        if (conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g') {
+            // Low-bandwidth mobile connection; avoid extra background network usage
+            return;
+        }
+    }
+
+    const prefetchedUrls = new Set();
+
+    function prefetchImage(src) {
+        if (!src || prefetchedUrls.has(src)) return;
+        prefetchedUrls.add(src);
+
+        const img = new Image();
+        img.decoding = 'async';
+        if ('fetchPriority' in img) {
+            img.fetchPriority = 'low';
+        }
+        img.src = src;
+    }
+
+    function getHiddenImageUrls(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return [];
+        const imgs = container.querySelectorAll('img[src]');
+        return Array.from(imgs).map(img => img.src).filter(Boolean);
+    }
+
+    // Prefetches all images inside a specific container (e.g. on user hover or click)
+    function prefetchContainer(containerId) {
+        const urls = getHiddenImageUrls(containerId);
+        urls.forEach(prefetchImage);
+    }
+
+    // Expose globally so toggleSection can trigger immediate load if clicked early
+    window.prefetchHiddenContainer = prefetchContainer;
+
+    // 2. High-intent fast-track: prefetch on hover, touch, or focus before click
+    const projectsBtn = document.getElementById('projects-toggle-btn');
+    if (projectsBtn) {
+        const triggerProjects = () => prefetchContainer('projects-hidden');
+        projectsBtn.addEventListener('mouseenter', triggerProjects, { once: true });
+        projectsBtn.addEventListener('touchstart', triggerProjects, { once: true, passive: true });
+        projectsBtn.addEventListener('focus', triggerProjects, { once: true });
+    }
+
+    const certsBtn = document.getElementById('certs-toggle-btn');
+    if (certsBtn) {
+        const triggerCerts = () => prefetchContainer('certs-hidden');
+        certsBtn.addEventListener('mouseenter', triggerCerts, { once: true });
+        certsBtn.addEventListener('touchstart', triggerCerts, { once: true, passive: true });
+        certsBtn.addEventListener('focus', triggerCerts, { once: true });
+    }
+
+    // 3. Speculative prefetch queue processed during idle periods
+    const allUrls = [
+        ...getHiddenImageUrls('projects-hidden'),
+        ...getHiddenImageUrls('certs-hidden')
+    ];
+
+    if (allUrls.length === 0) return;
+
+    let index = 0;
+    function processIdleQueue(deadline) {
+        while (index < allUrls.length && (deadline.timeRemaining() > 5 || deadline.didTimeout)) {
+            prefetchImage(allUrls[index]);
+            index++;
+        }
+
+        if (index < allUrls.length) {
+            scheduleNextIdleChunk();
+        }
+    }
+
+    function scheduleNextIdleChunk() {
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(processIdleQueue, { timeout: 2000 });
+        } else {
+            setTimeout(() => {
+                if (index < allUrls.length) {
+                    prefetchImage(allUrls[index]);
+                    index++;
+                    scheduleNextIdleChunk();
+                }
+            }, 300);
+        }
+    }
+
+    // 4. Start background prefetch ONLY after the main page is fully loaded and quiet
+    if (document.readyState === 'complete') {
+        scheduleNextIdleChunk();
+    } else {
+        window.addEventListener('load', () => {
+            if ('requestIdleCallback' in window) {
+                window.requestIdleCallback(processIdleQueue, { timeout: 3000 });
+            } else {
+                setTimeout(scheduleNextIdleChunk, 1200);
+            }
+        });
+    }
 }
