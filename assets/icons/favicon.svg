@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <style>
+    .bracket { stroke: #1b2cb8; }
+    .letter-y { fill: #00d2ff; }
+    .letter-n { fill: #ef4444; }
+    @media (prefers-color-scheme: light) {
+      .bracket { stroke: #1b2cb8; }
+      .letter-y { fill: #0284c7; }
+      .letter-n { fill: #dc2626; }
+    }
+  </style>
+  <!-- Left Bracket { -->
+  <path class="bracket" d="M 28 15 L 20 15 C 13 15 11 20 11 28 L 11 38 C 11 44 8 47 3 50 C 8 53 11 56 11 62 L 11 72 C 11 80 13 85 20 85 L 28 85" stroke-width="8" stroke-linecap="square" fill="none"/>
+  <!-- Letters Y (Blue) and N (Red) -->
+  <text x="50" y="61" font-family="'Outfit', 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" text-anchor="middle" letter-spacing="-1">
+    <tspan class="letter-y">Y</tspan><tspan class="letter-n">N</tspan>
+  </text>
+  <!-- Right Bracket } -->
+  <path class="bracket" d="M 72 15 L 80 15 C 87 15 89 20 89 28 L 89 38 C 89 44 92 47 97 50 C 92 53 89 56 89 62 L 89 72 C 89 80 87 85 80 85 L 72 85" stroke-width="8" stroke-linecap="square" fill="none"/>
+</svg>
