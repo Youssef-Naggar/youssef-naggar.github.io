@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Naggar;Youssef;;;
+FN:Youssef Naggar
+NICKNAME:YN
+TITLE:AI Engineer
+ORG:Cairo University - FCAI
+EMAIL;TYPE=INTERNET,PREF:youssef.naggar.pro@gmail.com
+TEL;TYPE=CELL,PREF:+201062070781
+TEL;TYPE=WHATSAPP:+201062070781
+ADR;TYPE=HOME:;;Cairo;Cairo;;Egypt
+URL;TYPE=Portfolio:https://youssef-naggar.is-a.dev
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/youssef-naggar
+URL;TYPE=GitHub:https://github.com/Youssef-Naggar
+NOTE:AI Engineer specializing in Deep Learning, Scalable ML Pipelines, and Production RAG Systems.
+END:VCARD

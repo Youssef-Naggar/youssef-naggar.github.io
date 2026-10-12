@@ -56,6 +56,7 @@ const translations = {
         "hero.name": "Youssef Naggar",
         "hero.headline": "AI Engineer || Ex-NBE & CIB Intern || Excellent Grade AI Student @ FCAI Cairo University",
         "hero.btn_resume": "Download Resume",
+        "hero.btn_vcf": "Save Contact",
         "hero.btn_contact": "Contact Me",
         "nav.about": "About",
         "nav.experience": "Experience",
@@ -175,10 +176,12 @@ const translations = {
         "certs.c6_issuer": `<svg class="svg-icon"><use href="#icon-calculator"></use></svg> Imperial College`,
         "contact.title": "Contact Me",
         "contact.email_label": "Email",
+        "contact.whatsapp_label": "WhatsApp",
         "contact.linkedin_label": "LinkedIn",
         "contact.github_label": "GitHub",
         "contact.location_label": "Location",
-        "contact.location_val": "Cairo, Egypt"
+        "contact.location_val": "Cairo, Egypt",
+        "contact.btn_save": "Save Contact"
     },
     ar: {
         page_title: "يوسف نجار - سابقة أعمال مهندس ذكاء اصطناعي",
@@ -186,6 +189,7 @@ const translations = {
         "hero.name": "يوسف نجار",
         "hero.headline": "مهندس ذكاء اصطناعي || متدرب سابق في البنك الأهلي المصري (NBE) والبنك التجاري الدولي (CIB) || طالب بتقدير امتياز في الذكاء الاصطناعي بحاسبات القاهرة",
         "hero.btn_resume": "تحميل السيرة الذاتية (CV)",
+        "hero.btn_vcf": "حفظ جهة الاتصال",
         "hero.btn_contact": "تواصل معي",
         "nav.about": "نبذة عني",
         "nav.experience": "الخبرات والتدريب",
@@ -305,10 +309,12 @@ const translations = {
         "certs.c6_issuer": `<svg class="svg-icon"><use href="#icon-calculator"></use></svg> Imperial College`,
         "contact.title": "تواصل معي",
         "contact.email_label": "البريد الإلكتروني",
+        "contact.whatsapp_label": "واتساب",
         "contact.linkedin_label": "لينكد إن",
         "contact.github_label": "جيت هاب",
         "contact.location_label": "الموقع الجغرافي",
-        "contact.location_val": "القاهرة، مصر"
+        "contact.location_val": "القاهرة، مصر",
+        "contact.btn_save": "حفظ جهة الاتصال"
     }
 };
 

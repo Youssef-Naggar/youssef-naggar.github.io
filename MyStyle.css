@@ -1224,7 +1224,69 @@ section {
     opacity: 1;
 }
 
+/* WhatsApp Card Custom Styling */
+.contact-card.whatsapp-card .contact-card-icon {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.35);
+    color: #25d366;
+}
+.contact-card.whatsapp-card:hover .contact-card-icon {
+    background: #25d366;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+}
 
+.contact-card-value.phone-val {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .contact-card-value.phone-val {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: right;
+}
+
+/* Centered Location Card (same width as other cards) */
+.contact-card.location-card-center {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.75rem);
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .contact-card.location-card-center {
+        width: 100%;
+    }
+}
+
+/* Centered Save Contact CTA Button */
+.contact-cta-wrapper {
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-save-vcf {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.95rem 2.2rem;
+    background: var(--theme-gradient);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px var(--theme-primary-glow);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-save-vcf:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px var(--theme-secondary-glow);
+    color: #ffffff;
+}
 
 /* Certificate Image Zoom Hint */
 .cert-img-wrapper {
